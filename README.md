@@ -276,7 +276,7 @@ Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-w
 
 Package license: Apache-2.0
 
-Summary: A Dagster integration for papermill
+Summary: Package for wandb Dagster components.
 
 About dagstermill
 -----------------

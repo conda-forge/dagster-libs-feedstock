@@ -182,7 +182,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -1563,7 +1563,7 @@ outputs:
       license: Apache-2.0
       license_family: APACHE
       license_file: dagster-wandb/LICENSE
-      summary: A Dagster integration for papermill
+      summary: Package for wandb Dagster components.
 
 about:
   home: https://github.com/dagster-io
