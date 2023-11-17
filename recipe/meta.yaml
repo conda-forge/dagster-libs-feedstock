@@ -48,6 +48,18 @@ source:
     url: https://pypi.io/packages/source/d/dagster-dbt/dagster-dbt-{{ version }}.tar.gz
     sha256: 1a1b0755536a0adc4becff2f545428bf591ab5ccbe23b4d726e507f1027b303f
 
+  - folder: dagster-deltalake
+    url: https://pypi.io/packages/source/d/dagster-deltalake/dagster-deltalake-{{ version }}.tar.gz
+    sha256: 009f070c50847ca0a1d9d89cb06de3a7e59d36742b179a9268c22612eeafd986
+
+  - folder: dagster-deltalake-pandas
+    url: https://pypi.io/packages/source/d/dagster-deltalake-pandas/dagster-deltalake-pandas-{{ version }}.tar.gz
+    sha256: b5ad57fcd7d31f08266a212a6caaf44af5d01e882fcf7628ab91d5318d38f9f3
+
+  - folder: dagster-deltalake-polars
+    url: https://pypi.io/packages/source/d/dagster-deltalake-polars/dagster-deltalake-polars-{{ version }}.tar.gz
+    sha256: bd5af0e00089c5f89c16555f5b45121cc8bb1d85ada899b30e6221b9f46186f1
+
   - folder: dagster-docker
     url: https://pypi.io/packages/source/d/dagster-docker/dagster-docker-{{ version }}.tar.gz
     sha256: 083394629ed93d4d4b8a9f9811b3565bf8e7c6234341bfe5b8d20cbac6c2262e
@@ -588,6 +600,92 @@ outputs:
       license_family: APACHE
       license_file: dagster-airbyte/LICENSE
       summary: Package for integrating Airbyte with Dagster.
+
+  - name: dagster-deltalake
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-deltalake && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - dagster {{ dagster }}.*
+        - deltalake >=0.12
+     test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_deltalake
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-deltalake/LICENSE
+      summary: Package for Deltalake-specific Dagster framework op and resource components.
+
+  - name: dagster-deltalake-pandas
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-deltalake-pandas && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
+        - dagster {{ dagster }}.*
+        - pandas
+     test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_deltalake_pandas
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-pandas
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-deltalake-pandas/LICENSE
+      summary: Package for storing Pandas DataFrames in Delta tables
+
+  - name: dagster-deltalake-polars
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-deltalake-polars && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
+        - dagster {{ dagster }}.*
+        - polars
+        # TODO: update after https://github.com/conda-forge/polars-feedstock/issues/194
+        # for now https://github.com/pola-rs/polars/blob/main/py-polars/pyproject.toml#L52C13-L52C29
+        - pyarrow >=7.0.0
+     test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_deltalake_polars
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-polars
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-deltalake-polars/LICENSE
+      summary: Package for storing Polars DataFrames in Delta tables.
 
   - name: dagster-dbt
     build:
