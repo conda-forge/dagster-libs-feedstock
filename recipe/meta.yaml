@@ -613,7 +613,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - deltalake >=0.12
-     test:
+    test:
       requires:
         - python >=3.8
         - pip
@@ -641,7 +641,7 @@ outputs:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-     test:
+    test:
       requires:
         - python >=3.8
         - pip
@@ -672,7 +672,7 @@ outputs:
         # TODO: update after https://github.com/conda-forge/polars-feedstock/issues/194
         # for now https://github.com/pola-rs/polars/blob/main/py-polars/pyproject.toml#L52C13-L52C29
         - pyarrow >=7.0.0
-     test:
+    test:
       requires:
         - python >=3.8
         - pip
