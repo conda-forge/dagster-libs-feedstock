@@ -702,7 +702,7 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        - dbt-core <1.8.0
+        - dbt-core >=1.4,<1.8
         - jinja2
         - networkx
         - orjson
