@@ -2,7 +2,7 @@
 {% set version = "0.22.0" %}
 
 # derive the dagster version: use only in deps so only this line needs to change
-{% set dagster = "1.5." ~ version.split(".")[-1] %}
+{% set dagster = "1.6." ~ version.split(".")[-1] %}
 
 package:
   name: dagster-libs
