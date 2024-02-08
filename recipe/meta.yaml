@@ -1502,7 +1502,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
-        - snowflake-connector-python >=2.1.0,<3.5.0
+        - snowflake-connector-python >=2.1.0
 
     test:
       requires:
@@ -1536,7 +1536,7 @@ outputs:
         - pandas
         - python >=3.8
         - requests
-        - snowflake-connector-python
+        - snowflake-connector-python >=2.1.0
         - snowflake-sqlalchemy >=1.2
         - sqlalchemy !=1.4.42
     test:
