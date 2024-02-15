@@ -355,7 +355,7 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        - python-duckdb
+        - python-duckdb <0.10.0
         - python >=3.8
 
     test:
