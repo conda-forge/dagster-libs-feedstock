@@ -140,6 +140,10 @@ source:
     url: https://pypi.io/packages/source/d/dagster-papertrail/dagster-papertrail-{{ version }}.tar.gz
     sha256: faaffcd65127200713fb124f6d39c60c0f5c2d32042041f21cd8c42579fcf842
 
+  - folder: dagster-polars
+    url: https://pypi.io/packages/source/d/dagster-polars/dagster-polars-{{ version }}.tar.gz
+    sha256: 55f28da2e578224827b3717e4f6c679c59dd793797ebfef5b071b825ea7355dc
+
   - folder: dagster-postgres
     url: https://pypi.io/packages/source/d/dagster-postgres/dagster-postgres-{{ version }}.tar.gz
     sha256: 0379af769b25bb2e400122770043ec3fce129037899aa8279434c921c503c189
@@ -1173,6 +1177,40 @@ outputs:
       license_family: APACHE
       license_file: dagster-papertrail/LICENSE
       summary: Package for papertrail Dagster framework components.
+
+  - name: dagster-polars
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-polars && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - dagster {{ dagster }}.*
+        - polars >=0.20.0
+        - pyarrow >=8.0.0
+        - python >=3.8
+        - typing_extensions >=4.7.0
+        - universal_pathlib >=0.1.4
+
+    test:
+      imports:
+        - dagster_polars
+      commands:
+        - pip check
+      requires:
+        - python >=3.8
+        - pip
+
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-polars/LICENSE
+      summary: A Dagster integration for polars
 
   - name: dagster-postgres
     build:
