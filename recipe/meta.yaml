@@ -1715,7 +1715,7 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        - wandb >=0.13.5,<0.15.4
+        - wandb >=0.15.11,<1.0
     test:
       requires:
         - python >=3.8
