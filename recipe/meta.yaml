@@ -124,6 +124,10 @@ source:
     url: https://pypi.io/packages/source/d/dagster-mysql/dagster-mysql-{{ version }}.tar.gz
     sha256: 3084f110a0090cc8379e29aee7cb024411892fb6d1d3e115e38f985d98d57cbc
 
+  - folder: dagster-openai
+    url: https://pypi.io/packages/source/d/dagster-openai/dagster-openai-{{ version }}.tar.gz
+    sha256: efde4189e63896c6b93117014aa6b5c44575a34b7bc61af46ca20f2890f55f02
+
   - folder: dagster-pagerduty
     url: https://pypi.io/packages/source/d/dagster-pagerduty/dagster-pagerduty-{{ version }}.tar.gz
     sha256: cf97dce74c3c53925e68f8f71beca72cb15bf6c3a6d2ab2b67a2c6758e4316b9
@@ -1118,6 +1122,37 @@ outputs:
       license_file: dagster-msteams/LICENSE
       summary: A Microsoft Teams client resource for posting to Microsoft Teams
 
+  - name: dagster-openai
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-openai && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - dagster {{ dagster }}.*
+        - openai
+        - python >=3.8
+
+    test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_openai
+      commands:
+        - pip check
+
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-openai
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-openai/LICENSE
+      summary: A Open AI client resource for interacting with Open AI API
+
   - name: dagster-pagerduty
     build:
       noarch: python
@@ -1541,7 +1576,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
-        - snowflake-connector-python >=2.1.0
+        - snowflake-connector-python >=3.4.0
 
     test:
       requires:
