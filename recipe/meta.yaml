@@ -1228,7 +1228,7 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        - polars >=0.20.0
+        - polars >=0.20.0,<0.20.17
         - pyarrow >=8.0.0
         - python >=3.8
         - typing_extensions >=4.7.0
