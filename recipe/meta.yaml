@@ -724,6 +724,9 @@ outputs:
       requires:
         - python >=3.8
         - pip
+        # todo: fix upstream
+        - sqlglotrs ==1.3.0
+        - sqlglot ==23.3.0
       imports:
         - dagster_dbt
       commands:
