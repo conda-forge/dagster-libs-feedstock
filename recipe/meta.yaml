@@ -990,7 +990,10 @@ outputs:
       imports:
         - dagster_mlflow
       commands:
-        - pip check
+        # as of #60, see `dagster-mlflow X requires mlflow, which is not installed``
+        # due to some "clever" packaging tricks with mlflow(-skinny)
+        #
+        # - pip check
 
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mlflow
