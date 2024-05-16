@@ -108,6 +108,10 @@ source:
     url: https://pypi.io/packages/source/d/dagster-k8s/dagster-k8s-{{ version }}.tar.gz
     sha256: 2b319dfe59b6c079327a6af37ba02a506507549630cb756ebd78885cea28a144
 
+  - folder: dagster-looker
+    url: https://pypi.io/packages/source/d/dagster-looker/dagster_looker-{{ version }}.tar.gz
+    sha256: ce5a82f81257c4903c8cdafa652ab3369ce460f223a9685e0182760d169cd7eb
+
   - folder: dagster-managed-elements
     url: https://pypi.io/packages/source/d/dagster-managed-elements/dagster-managed-elements-{{ version }}.tar.gz
     sha256: a2eddee4a1da131cc55929c8c748abdcc5320f750b4fb3e8eb0839c83f6c1656
@@ -1001,6 +1005,35 @@ outputs:
       license_family: APACHE
       license_file: dagster-mlflow/LICENSE
       summary: Package for mlflow Dagster framework components
+
+  - name: dagster-looker
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-looker && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - dagster {{ dagster }}.*
+        - lkml
+        - sqlglot
+    test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_looker
+      commands:
+        - pip check
+
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-looker/LICENSE
+      summary: Looker with Dagster.
 
   - name: dagster-managed-elements
     build:
