@@ -395,7 +395,7 @@ outputs:
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
-        - pandas <2.1
+        - pandas
         - python >=3.8
 
     test:
@@ -461,7 +461,7 @@ outputs:
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
-        - pandas <2.1
+        - pandas
         - pyarrow
         - pyspark >=3
         - python >=3.8
@@ -620,7 +620,7 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        - deltalake >=0.12
+        - deltalake >=0.15
     test:
       requires:
         - python >=3.8
