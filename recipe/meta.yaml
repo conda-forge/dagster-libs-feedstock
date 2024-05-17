@@ -1006,34 +1006,35 @@ outputs:
       license_file: dagster-mlflow/LICENSE
       summary: Package for mlflow Dagster framework components
 
-  - name: dagster-looker
-    build:
-      noarch: python
-      version: {{ version }}
-      script: cd dagster-looker && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-    requirements:
-      host:
-        - pip
-        - python >=3.8
-      run:
-        - dagster {{ dagster }}.*
-        - lkml
-        - sqlglot
-    test:
-      requires:
-        - python >=3.8
-        - pip
-      imports:
-        - dagster_looker
-      commands:
-        - pip check
+  # TODO: restore after lxml is available
+  # - name: dagster-looker
+  #   build:
+  #     noarch: python
+  #     version: {{ version }}
+  #     script: cd dagster-looker && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  #   requirements:
+  #     host:
+  #       - pip
+  #       - python >=3.8
+  #     run:
+  #       - dagster {{ dagster }}.*
+  #       - lkml
+  #       - sqlglot
+  #   test:
+  #     requires:
+  #       - python >=3.8
+  #       - pip
+  #     imports:
+  #       - dagster_looker
+  #     commands:
+  #       - pip check
 
-    about:
-      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
-      license: Apache-2.0
-      license_family: APACHE
-      license_file: dagster-looker/LICENSE
-      summary: Looker with Dagster.
+  #   about:
+  #     home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
+  #     license: Apache-2.0
+  #     license_family: APACHE
+  #     license_file: dagster-looker/LICENSE
+  #     summary: Looker with Dagster.
 
   - name: dagster-managed-elements
     build:
