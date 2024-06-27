@@ -1079,6 +1079,8 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
+        # Pin numpy pending release of pandas that either supports numpy 2 or adds a pin
+        - numpy <2
         - pandas
         - python >=3.8
 
@@ -1550,8 +1552,10 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
+        # Pin numpy pending release of pandera that either supports numpy 2 or adds a pin
+        - numpy <2
         - pandas
-        - pandera >=0.14.2
+        - pandera >=0.14.2,<0.20.0
         - python >=3.8
 
     test:
