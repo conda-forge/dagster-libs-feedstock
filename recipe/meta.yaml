@@ -1756,7 +1756,10 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
+        # Pin numpy pending release of wandb that either supports numpy 2 or adds a pin
+        - numpy <2
         - wandb >=0.15.11,<1.0
+
     test:
       requires:
         - python >=3.8
