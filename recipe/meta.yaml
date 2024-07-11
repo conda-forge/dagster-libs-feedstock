@@ -164,6 +164,10 @@ source:
     url: https://pypi.io/packages/source/d/dagster-pyspark/dagster-pyspark-{{ version }}.tar.gz
     sha256: 10cb430b7f0f9a462c0336503be2c1289d4c6ba08d7258bc34165af46989f1fb
 
+  - folder: dagster-sdf
+    url: https://pypi.io/packages/source/d/dagster-sdf/dagster-sdf-{{ version }}.tar.gz
+    sha256: fb2c8f62b96bcff40b0d846036989be8cdc3be6c6846331373c298248c1e5d41
+
   - folder: dagster-shell
     url: https://pypi.io/packages/source/d/dagster-shell/dagster-shell-{{ version }}.tar.gz
     sha256: 53c6bdb1523af731f52737bba455b1298988f7b2e12a302f38c69bb91070606e
@@ -1573,6 +1577,34 @@ outputs:
       license_family: APACHE
       license_file: dagster-pandera/LICENSE
       summary: Integration layer for dagster and pandera.
+
+  - name: dagster-sdf
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-sdf && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python >=3.8
+      run:
+        - dagster {{ dagster }}.*
+        - python >=3.8
+
+    test:
+      requires:
+        - python >=3.8
+        - pip
+      imports:
+        - dagster_sdf
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-sdf
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-sdf/LICENSE
+      summary: A Dagster integration for sd
 
   - name: dagster-shell
     build:
