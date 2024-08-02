@@ -1204,8 +1204,7 @@ outputs:
 
     requirements:
       host:
-        # later `pip` hard-fails on bad `pypd` metadata
-        - pip <24.2
+        - pip
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
@@ -1214,8 +1213,8 @@ outputs:
 
     test:
       requires:
-        - python >=3.8
-        - pip
+        # later `pip` hard-fails on bad `pypd` metadata
+        - pip <24.2
       imports:
         - dagster_pagerduty
       commands:
