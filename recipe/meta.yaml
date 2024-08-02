@@ -1204,7 +1204,8 @@ outputs:
 
     requirements:
       host:
-        - pip
+        # later `pip` hard-fails on bad `pypd` metadata
+        - pip <24.2
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
