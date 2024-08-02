@@ -641,8 +641,5 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
-* [@conda-forge/dagster](https://github.com/conda-forge/dagster/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@conda-forge/dagster](https://github.com/orgs/conda-forge/teams/dagster/)
 
