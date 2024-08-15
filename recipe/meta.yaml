@@ -791,6 +791,8 @@ outputs:
         - dagster {{ dagster }}.*
         - dataclasses
         - great-expectations >=0.11.9,!=0.12.8,!=0.13.17,!=0.13.27,<0.17.12
+        # Pin numpy pending update of great_expectations
+        - numpy <2
         - python >=3.8
 
     test:
@@ -1079,8 +1081,6 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        # Pin numpy pending release of pandas that either supports numpy 2 or adds a pin
-        - numpy <2
         - pandas
         - python >=3.8
 
@@ -1552,8 +1552,6 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        # Pin numpy pending release of pandera that either supports numpy 2 or adds a pin
-        - numpy <2
         - pandas
         - pandera >=0.15.0
         - python >=3.8
@@ -1756,8 +1754,6 @@ outputs:
         - python >=3.8
       run:
         - dagster {{ dagster }}.*
-        # Pin numpy pending release of wandb that either supports numpy 2 or adds a pin
-        - numpy <2
         - wandb >=0.15.11,<1.0
 
     test:
