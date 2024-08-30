@@ -1297,6 +1297,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - psycopg2-binary
