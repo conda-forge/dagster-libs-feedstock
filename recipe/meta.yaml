@@ -231,6 +231,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - celery >=4.3.0
         - click >=5.0,<9
@@ -266,6 +267,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -296,6 +298,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-celery", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -331,6 +334,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-celery", max_pin="x.x.x") }}
         - {{ pin_subpackage("dagster-k8s", max_pin="x.x.x") }}
@@ -365,6 +369,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python-duckdb <0.10.0
@@ -396,6 +401,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -428,6 +434,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -462,6 +469,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -496,6 +504,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - google-auth !=2.23.1
@@ -528,6 +537,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-spark", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -560,6 +570,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -592,6 +603,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - requests
@@ -622,6 +634,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - deltalake >=0.15,<0.18
@@ -649,6 +662,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -677,6 +691,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -712,6 +727,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - dbt-core >=1.6,<1.9
@@ -754,6 +770,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -786,6 +803,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-pandas", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -821,6 +839,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - cryptography >=1.4
         - dagster {{ dagster }}.*
@@ -854,6 +873,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - docker-py
@@ -886,6 +906,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-pandas", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -924,6 +945,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -953,6 +975,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -981,6 +1004,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - mlflow
@@ -1017,6 +1041,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - lkml
@@ -1049,6 +1074,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - click-spinner
         - dagster {{ dagster }}.*
@@ -1079,6 +1105,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - pandas
@@ -1109,6 +1136,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - mysql-connector-python
@@ -1141,6 +1169,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1171,6 +1200,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - openai
@@ -1202,6 +1232,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - pypd
@@ -1233,6 +1264,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1263,6 +1295,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - polars >=0.20.0
@@ -1329,6 +1362,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - prometheus_client
@@ -1360,6 +1394,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1391,6 +1426,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - paramiko
@@ -1423,6 +1459,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1454,6 +1491,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - boto3
         - dagster {{ dagster }}.*
@@ -1487,6 +1525,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - bokeh
         - dagster {{ dagster }}.*
@@ -1520,6 +1559,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - datadog
@@ -1551,6 +1591,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - pandas
@@ -1583,6 +1624,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1613,6 +1655,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - python >=3.8
@@ -1644,6 +1687,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -1679,6 +1723,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
@@ -1714,6 +1759,7 @@ outputs:
       host:
         - pip
         - python >=3.8
+        - setuptools
       run:
         - dagster {{ dagster }}.*
         - ipykernel >=4.9.0,!=5.4.0,!=5.4.1
