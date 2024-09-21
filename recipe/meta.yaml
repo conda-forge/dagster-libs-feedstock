@@ -1044,7 +1044,9 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
+        - cattrs <23.2
         - lkml
+        - looker-sdk
         - sqlglot
     test:
       requires:
