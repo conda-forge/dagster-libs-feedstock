@@ -509,7 +509,8 @@ outputs:
         - dagster {{ dagster }}.*
         - google-auth !=2.23.1
         - python >=3.8
-        - python-kubernetes
+        # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
+        - python-kubernetes <32
 
     test:
       requires:
@@ -730,6 +731,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
+        # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
         - dbt-core >=1.6,<1.9
         - jinja2
         - networkx
