@@ -4,6 +4,8 @@
 # derive the dagster version: use only in deps so only this line needs to change
 {% set dagster = "1.8." ~ version.split(".")[-1] %}
 
+{% if 1 %}{% set min_python = ">=3.8,<3.13" %}{% endif %}
+
 package:
   name: dagster-libs
   version: {{ version }}
@@ -210,9 +212,9 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ min_python }}
   run:
-    - python >=3.8
+    - python {{ min_python }}
 
 test:
   commands:
@@ -230,17 +232,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - celery >=4.3.0
         - click >=5.0,<9
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
         # to get viable intersecting click ranges
         - celery >=5.1.2
@@ -266,15 +268,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_census
@@ -297,18 +299,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-celery", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - dagster-graphql {{ dagster }}.*
         - docker-py
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
         # to get viable intersecting click ranges
         - celery >=5.1.2
@@ -333,17 +335,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-celery", max_pin="x.x.x") }}
         - {{ pin_subpackage("dagster-k8s", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
         # to get viable intersecting click ranges
         - celery >=5.1.2
@@ -368,16 +370,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - python-duckdb <0.10.0
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_duckdb
@@ -400,17 +402,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_duckdb_pandas
@@ -433,7 +435,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
@@ -441,11 +443,11 @@ outputs:
         # TODO: get polars-with-X outputs
         - polars
         - pyarrow >=4.0.0
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_duckdb_polars
@@ -468,7 +470,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
@@ -476,11 +478,11 @@ outputs:
         - pandas
         - pyarrow
         - pyspark >=3
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_duckdb_pyspark
@@ -503,18 +505,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - google-auth !=2.23.1
-        - python >=3.8
+        - python {{ min_python }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
         - python-kubernetes <32
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_k8s
@@ -537,17 +539,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-spark", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pyspark >=3
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_pyspark
@@ -570,15 +572,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_spark
@@ -603,7 +605,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
@@ -611,7 +613,7 @@ outputs:
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_airbyte
@@ -634,14 +636,14 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - deltalake >=0.15,<0.18
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_deltalake
@@ -662,7 +664,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
@@ -670,7 +672,7 @@ outputs:
         - pandas
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_deltalake_pandas
@@ -691,7 +693,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
@@ -702,7 +704,7 @@ outputs:
         - pyarrow >=7.0.0
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_deltalake_polars
@@ -727,7 +729,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
@@ -736,7 +738,7 @@ outputs:
         - jinja2
         - networkx
         - orjson
-        - python >=3.8
+        - python {{ min_python }}
         - requests
         - rich
         - sqlglot-rs
@@ -744,7 +746,7 @@ outputs:
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_dbt
@@ -771,16 +773,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
         - requests
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_fivetran
@@ -804,7 +806,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-pandas", max_pin="x.x.x") }}
@@ -813,11 +815,11 @@ outputs:
         - great-expectations >=0.11.9,!=0.12.8,!=0.13.17,!=0.13.27,<0.17.12
         # Pin numpy pending update of great_expectations
         - numpy <2
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_ge
@@ -840,18 +842,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - cryptography >=1.4
         - dagster {{ dagster }}.*
         - pyjwt
-        - python >=3.8
+        - python {{ min_python }}
         - requests
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_github
@@ -874,17 +876,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - docker-py
         - docker-image-py
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_docker
@@ -907,7 +909,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-pandas", max_pin="x.x.x") }}
@@ -917,7 +919,7 @@ outputs:
         - google-cloud-bigquery-core
         - google-cloud-storage
         - oauth2client
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
@@ -946,7 +948,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
@@ -954,7 +956,7 @@ outputs:
         - pandas
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_gcp_pandas
@@ -976,7 +978,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
@@ -984,7 +986,7 @@ outputs:
         - pyspark
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_gcp_pyspark
@@ -1005,13 +1007,13 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - mlflow
         - pandas
-        - python >=3.8
+        - python {{ min_python }}
     test:
       requires:
         # pulls in super-old `noarch` otherwise
@@ -1042,7 +1044,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
@@ -1052,7 +1054,7 @@ outputs:
         - sqlglot
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_looker
@@ -1077,7 +1079,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - click-spinner
@@ -1085,7 +1087,7 @@ outputs:
         - requests
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_managed_elements
@@ -1108,16 +1110,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - pandas
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_pandas
@@ -1139,15 +1141,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - mysql-connector-python
-        - python >=3.8
+        - python {{ min_python }}
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         # - pip
         # TODO: can't be installed, investigate upstream
         # #https://github.com/conda-forge/mysql-connector-python-feedstock/pull/77
@@ -1172,15 +1174,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
         - requests >=2,<3
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_msteams
@@ -1203,16 +1205,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - openai
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_openai
@@ -1235,12 +1237,12 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - pypd
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
@@ -1267,15 +1269,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_papertrail
@@ -1298,13 +1300,13 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - polars >=0.20.0
         - pyarrow >=8.0.0
-        - python >=3.8
+        - python {{ min_python }}
         - typing_extensions >=4.7.0
         - universal_pathlib >=0.1.4
 
@@ -1314,7 +1316,7 @@ outputs:
       commands:
         - pip check
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
 
     about:
@@ -1333,12 +1335,12 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - psycopg2-binary
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       imports:
@@ -1346,7 +1348,7 @@ outputs:
       commands:
         - pip check
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
 
     about:
@@ -1365,16 +1367,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - prometheus_client
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_prometheus
@@ -1397,16 +1399,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
         - slack-sdk
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_slack
@@ -1429,17 +1431,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - paramiko
-        - python >=3.8
+        - python {{ min_python }}
         - sshtunnel
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_ssh
@@ -1462,16 +1464,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
         - twilio
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_twilio
@@ -1494,18 +1496,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - boto3
         - dagster {{ dagster }}.*
         - packaging
-        - python >=3.8
+        - python {{ min_python }}
         - requests
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_aws
@@ -1528,18 +1530,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - bokeh
         - dagster {{ dagster }}.*
         - dask >=1.2.2
         - distributed >=1.28.1
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_dask
@@ -1562,16 +1564,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - datadog
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_datadog
@@ -1594,17 +1596,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
         - pandas
         - pandera >=0.15.0
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_pandera
@@ -1627,15 +1629,15 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_shell
@@ -1658,16 +1660,16 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >=3.8
+        - python {{ min_python }}
         - snowflake-connector-python >=3.4.0
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_snowflake
@@ -1690,20 +1692,20 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >=3.8
+        - python {{ min_python }}
         - requests
         - snowflake-connector-python >=2.1.0
         - snowflake-sqlalchemy >=1.2
         - sqlalchemy !=1.4.42
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_snowflake_pandas
@@ -1726,18 +1728,18 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pyspark
-        - python >=3.8
+        - python {{ min_python }}
         - requests
         - snowflake-sqlalchemy
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_snowflake_pyspark
@@ -1762,7 +1764,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
@@ -1772,13 +1774,12 @@ outputs:
         - nbconvert
         - packaging >=20.9
         - papermill >=1.0.0
-        - python >=3.8
+        - python {{ min_python }}
         - scrapbook >=0.5
 
     test:
       requires:
-        # FIXME: https://github.com/conda-forge/dagster-feedstock/issues/297
-        - python >=3.8,<3.12
+        - python {{ min_python }}
         - pip
       imports:
         - dagstermill
@@ -1802,7 +1803,7 @@ outputs:
     requirements:
       host:
         - pip
-        - python >=3.8
+        - python {{ min_python }}
         - setuptools
       run:
         - dagster {{ dagster }}.*
@@ -1810,7 +1811,7 @@ outputs:
 
     test:
       requires:
-        - python >=3.8
+        - python {{ min_python }}
         - pip
       imports:
         - dagster_wandb
