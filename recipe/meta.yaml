@@ -1500,6 +1500,7 @@ outputs:
         - setuptools
       run:
         - boto3
+        - boto3-stubs-lite-essential
         - dagster {{ dagster }}.*
         - packaging
         - python {{ min_python }}
