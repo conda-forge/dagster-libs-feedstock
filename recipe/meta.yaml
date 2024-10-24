@@ -1050,7 +1050,8 @@ outputs:
         - dagster {{ dagster }}.*
         - cattrs <23.2
         - lkml
-        - looker-sdk
+        - looker-sdk <24.18.0
+        - python-liquid
         - sqlglot
     test:
       requires:
