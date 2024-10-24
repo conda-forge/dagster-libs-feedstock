@@ -228,7 +228,6 @@ outputs:
       script: cd dagster-celery && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
       entry_points:
         - dagster-celery = dagster_celery.cli:main
-
     requirements:
       host:
         - pip
@@ -239,7 +238,6 @@ outputs:
         - click >=5.0,<9
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -264,7 +262,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-census && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -273,7 +270,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -282,7 +278,6 @@ outputs:
         - dagster_census
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-census
       license: Apache-2.0
@@ -295,7 +290,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-celery-docker && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -307,7 +301,6 @@ outputs:
         - dagster-graphql {{ dagster }}.*
         - docker-py
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -318,7 +311,6 @@ outputs:
         - dagster_celery_docker
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-docker
       license: Apache-2.0
@@ -331,7 +323,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-celery-k8s && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -342,7 +333,6 @@ outputs:
         - {{ pin_subpackage("dagster-k8s", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -353,7 +343,6 @@ outputs:
         - dagster_celery_k8s
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-k8s
       license: Apache-2.0
@@ -366,7 +355,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-duckdb && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -376,7 +364,6 @@ outputs:
         - dagster {{ dagster }}.*
         - python-duckdb <0.10.0
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -385,7 +372,6 @@ outputs:
         - dagster_duckdb
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb
       license: Apache-2.0
@@ -398,7 +384,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-duckdb-pandas && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -409,7 +394,6 @@ outputs:
         - dagster {{ dagster }}.*
         - pandas
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -418,7 +402,6 @@ outputs:
         - dagster_duckdb_pandas
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pandas
       license: Apache-2.0
@@ -431,7 +414,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-duckdb-polars && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -444,7 +426,6 @@ outputs:
         - polars
         - pyarrow >=4.0.0
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -466,7 +447,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-duckdb-pyspark && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -479,7 +459,6 @@ outputs:
         - pyarrow
         - pyspark >=3
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -488,7 +467,6 @@ outputs:
         - dagster_duckdb_pyspark
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
       license: Apache-2.0
@@ -501,7 +479,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-k8s && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -513,7 +490,6 @@ outputs:
         - python {{ min_python }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
         - python-kubernetes <32
-
     test:
       requires:
         - python {{ min_python }}
@@ -522,7 +498,6 @@ outputs:
         - dagster_k8s
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-k8s
       license: Apache-2.0
@@ -535,7 +510,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-pyspark && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -546,7 +520,6 @@ outputs:
         - dagster {{ dagster }}.*
         - pyspark >=3
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -555,7 +528,6 @@ outputs:
         - dagster_pyspark
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pyspark
       license: Apache-2.0
@@ -568,7 +540,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-spark && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -577,7 +548,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -586,7 +556,6 @@ outputs:
         - dagster_spark
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-spark
       license: Apache-2.0
@@ -601,7 +570,6 @@ outputs:
       script: cd dagster-airbyte && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
       entry_points:
         - dagster-airbyte = dagster_airbyte.cli:main
-
     requirements:
       host:
         - pip
@@ -610,7 +578,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - requests
-
     test:
       requires:
         - python {{ min_python }}
@@ -620,7 +587,6 @@ outputs:
       commands:
         - pip check
         - dagster-airbyte --help
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-airbyte
       license: Apache-2.0
@@ -725,7 +691,6 @@ outputs:
       entry_points:
         - dagster-dbt-cloud = dagster_dbt.cloud.cli:app
         - dagster-dbt = dagster_dbt.cli.app:app
-
     requirements:
       host:
         - pip
@@ -743,7 +708,6 @@ outputs:
         - rich
         - sqlglot-rs
         - typer >=0.9.0
-
     test:
       requires:
         - python {{ min_python }}
@@ -754,7 +718,6 @@ outputs:
         - pip check
         - dagster-dbt-cloud --help
         - dagster-dbt --help
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dbt
       license: Apache-2.0
@@ -769,7 +732,6 @@ outputs:
       script: cd dagster-fivetran && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
       entry_points:
         - dagster-fivetran = dagster_fivetran.cli:main
-
     requirements:
       host:
         - pip
@@ -779,7 +741,6 @@ outputs:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
         - requests
-
     test:
       requires:
         - python {{ min_python }}
@@ -789,7 +750,6 @@ outputs:
       commands:
         - pip check
         - dagster-fivetran --help
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-fivetran
       license: Apache-2.0
@@ -802,7 +762,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-ge && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -816,7 +775,6 @@ outputs:
         # Pin numpy pending update of great_expectations
         - numpy <2
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -825,7 +783,6 @@ outputs:
         - dagster_ge
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ge
       license: Apache-2.0
@@ -838,7 +795,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-github && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -850,7 +806,6 @@ outputs:
         - pyjwt
         - python {{ min_python }}
         - requests
-
     test:
       requires:
         - python {{ min_python }}
@@ -859,7 +814,6 @@ outputs:
         - dagster_github
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-github
       license: Apache-2.0
@@ -872,7 +826,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-docker && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -883,7 +836,6 @@ outputs:
         - docker-py
         - docker-image-py
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -892,7 +844,6 @@ outputs:
         - dagster_docker
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-docker
       license: Apache-2.0
@@ -905,7 +856,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-gcp && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -920,7 +870,6 @@ outputs:
         - google-cloud-storage
         - oauth2client
         - python {{ min_python }}
-
     test:
       requires:
         - pip
@@ -931,7 +880,6 @@ outputs:
         - dagster_gcp.gcs
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp
       license: Apache-2.0
@@ -944,7 +892,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-gcp-pandas && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -962,7 +909,6 @@ outputs:
         - dagster_gcp_pandas
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pandas
       license: Apache-2.0
@@ -1028,7 +974,6 @@ outputs:
         # due to some "clever" packaging tricks with mlflow(-skinny)
         #
         # - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mlflow
       license: Apache-2.0
@@ -1061,7 +1006,6 @@ outputs:
         - dagster_looker
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
       license: Apache-2.0
@@ -1094,7 +1038,6 @@ outputs:
         - dagster_managed_elements
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-managed-elements
       license: Apache-2.0
@@ -1107,7 +1050,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-pandas && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1117,7 +1059,6 @@ outputs:
         - dagster {{ dagster }}.*
         - pandas
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1126,7 +1067,6 @@ outputs:
         - dagster_pandas
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster
       license: Apache-2.0
@@ -1159,7 +1099,6 @@ outputs:
         - dagster_mysql
       # commands:
       #   - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mysql
       license: Apache-2.0
@@ -1189,7 +1128,6 @@ outputs:
         - dagster_msteams
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-msteams
       license: Apache-2.0
@@ -1202,7 +1140,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-openai && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1212,7 +1149,6 @@ outputs:
         - dagster {{ dagster }}.*
         - openai
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1221,7 +1157,6 @@ outputs:
         - dagster_openai
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-openai
       license: Apache-2.0
@@ -1234,7 +1169,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-pagerduty && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1244,7 +1178,6 @@ outputs:
         - dagster {{ dagster }}.*
         - pypd
         - python {{ min_python }}
-
     test:
       requires:
         # later `pip` hard-fails on bad `pypd` metadata
@@ -1253,7 +1186,6 @@ outputs:
         - dagster_pagerduty
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pagerduty
       license: Apache-2.0
@@ -1266,7 +1198,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-papertrail && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1275,7 +1206,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1284,7 +1214,6 @@ outputs:
         - dagster_papertrail
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-papertrail
       license: Apache-2.0
@@ -1297,7 +1226,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-polars && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1310,7 +1238,6 @@ outputs:
         - python {{ min_python }}
         - typing_extensions >=4.7.0
         - universal_pathlib >=0.1.4
-
     test:
       imports:
         - dagster_polars
@@ -1319,7 +1246,6 @@ outputs:
       requires:
         - python {{ min_python }}
         - pip
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
       license: Apache-2.0
@@ -1332,7 +1258,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-postgres && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1342,7 +1267,6 @@ outputs:
         - dagster {{ dagster }}.*
         - psycopg2-binary
         - python {{ min_python }}
-
     test:
       imports:
         - dagster_postgres
@@ -1351,7 +1275,6 @@ outputs:
       requires:
         - python {{ min_python }}
         - pip
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-postgres
       license: Apache-2.0
@@ -1364,7 +1287,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-prometheus && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1374,7 +1296,6 @@ outputs:
         - dagster {{ dagster }}.*
         - prometheus_client
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1383,7 +1304,6 @@ outputs:
         - dagster_prometheus
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-prometheus
       license: Apache-2.0
@@ -1396,7 +1316,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-slack && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1406,7 +1325,6 @@ outputs:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
         - slack-sdk
-
     test:
       requires:
         - python {{ min_python }}
@@ -1415,7 +1333,6 @@ outputs:
         - dagster_slack
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-slack
       license: Apache-2.0
@@ -1428,7 +1345,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-ssh && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1439,7 +1355,6 @@ outputs:
         - paramiko
         - python {{ min_python }}
         - sshtunnel
-
     test:
       requires:
         - python {{ min_python }}
@@ -1448,7 +1363,6 @@ outputs:
         - dagster_ssh
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ssh
       license: Apache-2.0
@@ -1461,7 +1375,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-twilio && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1471,7 +1384,6 @@ outputs:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
         - twilio
-
     test:
       requires:
         - python {{ min_python }}
@@ -1480,7 +1392,6 @@ outputs:
         - dagster_twilio
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-twilio
       license: Apache-2.0
@@ -1493,7 +1404,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-aws && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1506,7 +1416,6 @@ outputs:
         - packaging
         - python {{ min_python }}
         - requests
-
     test:
       requires:
         - python {{ min_python }}
@@ -1515,7 +1424,6 @@ outputs:
         - dagster_aws
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-aws
       license: Apache-2.0
@@ -1528,7 +1436,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-dask && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1540,7 +1447,6 @@ outputs:
         - dask >=1.2.2
         - distributed >=1.28.1
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1549,7 +1455,6 @@ outputs:
         - dagster_dask
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dask
       license: Apache-2.0
@@ -1562,7 +1467,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-datadog && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1572,7 +1476,6 @@ outputs:
         - dagster {{ dagster }}.*
         - datadog
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1581,7 +1484,6 @@ outputs:
         - dagster_datadog
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-datadog
       license: Apache-2.0
@@ -1594,7 +1496,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-pandera && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1605,7 +1506,6 @@ outputs:
         - pandas
         - pandera >=0.15.0
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1614,7 +1514,6 @@ outputs:
         - dagster_pandera
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pandera
       license: Apache-2.0
@@ -1627,7 +1526,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-shell && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1636,7 +1534,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
-
     test:
       requires:
         - python {{ min_python }}
@@ -1645,7 +1542,6 @@ outputs:
         - dagster_shell
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-shell
       license: Apache-2.0
@@ -1658,7 +1554,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-snowflake && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1668,7 +1563,6 @@ outputs:
         - dagster {{ dagster }}.*
         - python {{ min_python }}
         - snowflake-connector-python >=3.4.0
-
     test:
       requires:
         - python {{ min_python }}
@@ -1677,7 +1571,6 @@ outputs:
         - dagster_snowflake
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
       license: Apache-2.0
@@ -1690,7 +1583,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-snowflake-pandas && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1713,7 +1605,6 @@ outputs:
         - dagster_snowflake_pandas
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
       license: Apache-2.0
@@ -1726,7 +1617,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-snowflake-pyspark && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1747,7 +1637,6 @@ outputs:
         - dagster_snowflake_pyspark
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
       license: Apache-2.0
@@ -1762,7 +1651,6 @@ outputs:
       script: cd dagstermill && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
       entry_points:
         - dagstermill = dagstermill.cli:main
-
     requirements:
       host:
         - pip
@@ -1778,7 +1666,6 @@ outputs:
         - papermill >=1.0.0
         - python {{ min_python }}
         - scrapbook >=0.5
-
     test:
       requires:
         - python {{ min_python }}
@@ -1788,7 +1675,6 @@ outputs:
       commands:
         - dagstermill --help
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagstermill
       license: Apache-2.0
@@ -1801,7 +1687,6 @@ outputs:
       noarch: python
       version: {{ version }}
       script: cd dagster-wandb && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
     requirements:
       host:
         - pip
@@ -1810,7 +1695,6 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - wandb >=0.15.11,<1.0
-
     test:
       requires:
         - python {{ min_python }}
@@ -1819,7 +1703,6 @@ outputs:
         - dagster_wandb
       commands:
         - pip check
-
     about:
       home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-wandb
       license: Apache-2.0
