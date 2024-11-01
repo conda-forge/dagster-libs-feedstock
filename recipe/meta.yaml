@@ -158,6 +158,10 @@ source:
     url: https://pypi.org/packages/source/d/dagster-postgres/dagster-postgres-{{ version }}.tar.gz
     sha256: c8293dddc53f6b73978446b0e610e9c2571e69b8e599ad2e5ffc954c01ed9570
 
+  - folder: dagster-powerbi
+    url: https://pypi.org/packages/source/d/dagster-powerbi/dagster_powerbi-{{ version }}.tar.gz
+    sha256: 4ab47d88a7d5d51d10171a1e35dcedbabc4f63546a4fbdaba7ac2fe4ca303d51
+
   - folder: dagster-prometheus
     url: https://pypi.org/packages/source/d/dagster-prometheus/dagster-prometheus-{{ version }}.tar.gz
     sha256: f2c52e01b65fd19938658102d3eb1857d87716db1666544630d53be464fcda21
@@ -169,6 +173,10 @@ source:
   - folder: dagster-shell
     url: https://pypi.org/packages/source/d/dagster-shell/dagster-shell-{{ version }}.tar.gz
     sha256: 800c5b2a60ce3d4644e0c8154faf1d6b8562d1aa8ed97c4c69c0ab315a7a9cf9
+
+  - folder: dagster-sigma
+    url: https://pypi.org/packages/source/d/dagster-sigma/dagster-sigma-{{ version }}.tar.gz
+    sha256: 46675a390a495202ee558537286c064dcdbdee2518a12b44e02b7167235eeab6
 
   - folder: dagster-slack
     url: https://pypi.org/packages/source/d/dagster-slack/dagster-slack-{{ version }}.tar.gz
@@ -193,6 +201,10 @@ source:
   - folder: dagster-ssh
     url: https://pypi.org/packages/source/d/dagster-ssh/dagster-ssh-{{ version }}.tar.gz
     sha256: c0c872140705f66515123d8a6ab5a48777e92f93441a5c68c5be55e0088190be
+
+  - folder: dagster-tableau
+    url: https://pypi.org/packages/source/d/dagster-tableau/dagster-tableau-{{ version }}.tar.gz
+    sha256: 0f4b6f8da706777ead06182b2eac096eb723998b90ccf7d0575ff0ee0160d480
 
   - folder: dagster-twilio
     url: https://pypi.org/packages/source/d/dagster-twilio/dagster-twilio-{{ version }}.tar.gz
@@ -1280,6 +1292,34 @@ outputs:
       license_file: dagster-postgres/LICENSE
       summary: A Dagster integration for postgres
 
+  - name: dagster-powerbi
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-powerbi && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python {{ min_python }}
+        - setuptools
+      run:
+        - dagster {{ dagster }}.*
+        - python {{ min_python }}
+    test:
+      imports:
+        - dagster_powerbi
+      commands:
+        - pip check
+      requires:
+        - python {{ min_python }}
+        - pip
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-powerbi
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-powerbi/LICENSE
+      summary: Build assets representing Power BI dashboards and reports.
+
   - name: dagster-prometheus
     build:
       noarch: python
@@ -1308,6 +1348,36 @@ outputs:
       license_family: APACHE
       license_file: dagster-prometheus/LICENSE
       summary: A Dagster integration for prometheus
+
+  - name: dagster-sigma
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-sigma && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python {{ min_python }}
+        - setuptools
+      run:
+        - dagster {{ dagster }}.*
+        - python {{ min_python }}
+        - aiohttp
+        - sqlglot
+    test:
+      requires:
+        - python {{ min_python }}
+        - pip
+      imports:
+        - dagster_sigma
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-sigma
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-sigma/LICENSE
+      summary: Build assets representing Sigma dashboards.
 
   - name: dagster-slack
     build:
@@ -1367,6 +1437,36 @@ outputs:
       license_family: APACHE
       license_file: dagster-ssh/LICENSE
       summary: Package for ssh Dagster framework components.
+
+  - name: dagster-tableau
+    build:
+      noarch: python
+      version: {{ version }}
+      script: cd dagster-tableau && {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - pip
+        - python {{ min_python }}
+        - setuptools
+      run:
+        - dagster {{ dagster }}.*
+        - python {{ min_python }}
+        - pyjwt
+        - tableauserverclient >=0.32
+    test:
+      requires:
+        - python {{ min_python }}
+        - pip
+      imports:
+        - dagster_tableau
+      commands:
+        - pip check
+    about:
+      home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-tableau
+      license: Apache-2.0
+      license_family: APACHE
+      license_file: dagster-tableau/LICENSE
+      summary: Build assets representing Tableau workbooks and sheets.
 
   - name: dagster-twilio
     build:
