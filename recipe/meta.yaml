@@ -175,7 +175,7 @@ source:
     sha256: 800c5b2a60ce3d4644e0c8154faf1d6b8562d1aa8ed97c4c69c0ab315a7a9cf9
 
   - folder: dagster-sigma
-    url: https://pypi.org/packages/source/d/dagster-sigma/dagster-sigma-{{ version }}.tar.gz
+    url: https://pypi.org/packages/source/d/dagster-sigma/dagster_sigma-{{ version }}.tar.gz
     sha256: 46675a390a495202ee558537286c064dcdbdee2518a12b44e02b7167235eeab6
 
   - folder: dagster-slack
@@ -203,7 +203,7 @@ source:
     sha256: c0c872140705f66515123d8a6ab5a48777e92f93441a5c68c5be55e0088190be
 
   - folder: dagster-tableau
-    url: https://pypi.org/packages/source/d/dagster-tableau/dagster-tableau-{{ version }}.tar.gz
+    url: https://pypi.org/packages/source/d/dagster-tableau/dagster_tableau-{{ version }}.tar.gz
     sha256: 0f4b6f8da706777ead06182b2eac096eb723998b90ccf7d0575ff0ee0160d480
 
   - folder: dagster-twilio
