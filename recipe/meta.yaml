@@ -1248,8 +1248,6 @@ outputs:
         - python {{ min_python }}
         - typing_extensions >=4.7.0
         - universal_pathlib >=0.1.4
-        # TODO: remove after https://github.com/dagster-io/dagster/issues/25705
-        - dagster-gcp
     test:
       imports:
         - dagster_polars
