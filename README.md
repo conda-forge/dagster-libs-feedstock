@@ -224,15 +224,6 @@ Package license: Apache-2.0
 
 Summary: Package for papertrail Dagster framework components.
 
-About dagster-polars
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for polars
-
 About dagster-postgres
 ----------------------
 
@@ -476,6 +467,15 @@ Package license: Apache-2.0
 
 Summary: Package for storing PySpark DataFrames in GCP
 
+About dagster-polars
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for polars
+
 Current build status
 ====================
 
@@ -663,3 +663,4 @@ Feedstock Maintainers
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@conda-forge/dagster](https://github.com/orgs/conda-forge/teams/dagster/)
 
+<!-- trigger ci -->
