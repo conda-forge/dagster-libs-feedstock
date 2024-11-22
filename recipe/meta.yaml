@@ -1,11 +1,13 @@
 # use current version of libs as the source of truth to get accurate PR labels
 {% set version = "0.25.3" %}
 
+{% set python_min = python_min | default("3.9") %}
+{% set python_max_exclusive = "3.13" %}
+# currently only exception
+{% set dagster_ge_python_min = "3.10" %}
+
 # derive the dagster version: use only in deps so only this line needs to change
 {% set dagster = "1.9." ~ version.split(".")[-1] %}
-
-{% set python_min = python_min | default("3.9") %}
-{% set python_max = "3.13" %}
 
 package:
   name: dagster-libs
@@ -227,7 +229,7 @@ requirements:
   host:
     - python {{ python_min }}
   run:
-    - python >={{ python_min }},<{{ python_max }}
+    - python >={{ python_min }},<{{ python_max_exclusive }}
 
 test:
   commands:
@@ -250,7 +252,7 @@ outputs:
         - celery >=4.3.0
         - click >=5.0,<9
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -282,7 +284,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -313,7 +315,7 @@ outputs:
         - dagster {{ dagster }}.*
         - dagster-graphql {{ dagster }}.*
         - docker-py
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -345,7 +347,7 @@ outputs:
         - {{ pin_subpackage("dagster-celery", max_pin="x.x.x") }}
         - {{ pin_subpackage("dagster-k8s", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -376,7 +378,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python-duckdb <0.10.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -406,7 +408,7 @@ outputs:
         - {{ pin_subpackage("dagster-duckdb", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -438,7 +440,7 @@ outputs:
         # TODO: get polars-with-X outputs
         - polars
         - pyarrow >=4.0.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -471,7 +473,7 @@ outputs:
         - pandas
         - pyarrow
         - pyspark >=3
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -500,7 +502,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - google-auth !=2.23.1
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
         - python-kubernetes <32
     test:
@@ -532,7 +534,7 @@ outputs:
         - {{ pin_subpackage("dagster-spark", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pyspark >=3
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -560,7 +562,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -590,11 +592,11 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
     test:
       requires:
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - pip
       imports:
         - dagster_airbyte
@@ -621,7 +623,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - deltalake >=0.15,<0.18
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -651,7 +653,7 @@ outputs:
         - {{ pin_subpackage("dagster-deltalake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -684,7 +686,7 @@ outputs:
         # TODO: update after https://github.com/conda-forge/polars-feedstock/issues/194
         # for now https://github.com/pola-rs/polars/blob/main/py-polars/pyproject.toml#L52C13-L52C29
         - pyarrow >=7.0.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -720,7 +722,7 @@ outputs:
         - jinja2
         - networkx
         - orjson
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
         - rich
         - sqlglot-rs
@@ -756,7 +758,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
     test:
       requires:
@@ -782,17 +784,17 @@ outputs:
     requirements:
       host:
         - pip
-        - python {{ python_min }}
+        - python {{ dagster_ge_python_min }}
         - setuptools
       run:
         - {{ pin_subpackage("dagster-pandas", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - dataclasses
         - great-expectations >=0.17.15
-        - python >=3.10,<{{ python_max }}
+        - python >={{ dagster_ge_python_min }},<{{ python_max_exclusive }}
     test:
       requires:
-        - python 3.10
+        - python {{ dagster_ge_python_min }}
         - pip
       imports:
         - dagster_ge
@@ -819,7 +821,7 @@ outputs:
         - cryptography >=1.4
         - dagster {{ dagster }}.*
         - pyjwt
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
     test:
       requires:
@@ -850,7 +852,7 @@ outputs:
         - dagster {{ dagster }}.*
         - docker-py
         - docker-image-py
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -884,7 +886,7 @@ outputs:
         - google-cloud-bigquery-core
         - google-cloud-storage
         - oauth2client
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - pip
@@ -916,7 +918,7 @@ outputs:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -946,7 +948,7 @@ outputs:
         - {{ pin_subpackage("dagster-gcp", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pyspark
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -976,7 +978,7 @@ outputs:
         - dagster {{ dagster }}.*
         - mlflow
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         # pulls in super-old `noarch` otherwise
@@ -1013,7 +1015,7 @@ outputs:
         - cattrs <23.2
         - lkml
         - looker-sdk <24.18.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - python-liquid
         - sqlglot
     test:
@@ -1047,7 +1049,7 @@ outputs:
       run:
         - click-spinner
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
     test:
       requires:
@@ -1077,7 +1079,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1106,7 +1108,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - mysql-connector-python
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1137,7 +1139,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests >=2,<3
     test:
       requires:
@@ -1167,7 +1169,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - openai
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1196,7 +1198,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - pypd
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         # later `pip` hard-fails on bad `pypd` metadata
@@ -1224,7 +1226,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1254,7 +1256,7 @@ outputs:
         - dagster {{ dagster }}.*
         - polars >=0.20.0
         - pyarrow >=8.0.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - typing_extensions >=4.7.0
         - universal_pathlib >=0.1.4
     test:
@@ -1285,7 +1287,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - psycopg2-binary
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       imports:
         - dagster_postgres
@@ -1313,7 +1315,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       imports:
         - dagster_powerbi
@@ -1342,7 +1344,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - prometheus_client
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1372,7 +1374,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - aiohttp
         - sqlglot
     test:
@@ -1402,7 +1404,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - slack-sdk
     test:
       requires:
@@ -1432,7 +1434,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - paramiko
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - sshtunnel
     test:
       requires:
@@ -1461,7 +1463,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - pyjwt
         - tableauserverclient >=0.32
     test:
@@ -1491,7 +1493,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - twilio
     test:
       requires:
@@ -1523,7 +1525,7 @@ outputs:
         - boto3-stubs-lite-essential
         - dagster {{ dagster }}.*
         - packaging
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
     test:
       requires:
@@ -1555,7 +1557,7 @@ outputs:
         - dagster {{ dagster }}.*
         - dask >=1.2.2
         - distributed >=1.28.1
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1584,7 +1586,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - datadog
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1614,7 +1616,7 @@ outputs:
         - dagster {{ dagster }}.*
         - pandas
         - pandera >=0.15.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1642,7 +1644,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
         - python {{ python_min }}
@@ -1670,7 +1672,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - snowflake-connector-python >=3.4.0
     test:
       requires:
@@ -1701,7 +1703,7 @@ outputs:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pandas
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
         - snowflake-connector-python >=2.1.0
         - snowflake-sqlalchemy >=1.2
@@ -1735,7 +1737,7 @@ outputs:
         - {{ pin_subpackage("dagster-snowflake", max_pin="x.x.x") }}
         - dagster {{ dagster }}.*
         - pyspark
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
         - snowflake-sqlalchemy
     test:
@@ -1773,7 +1775,7 @@ outputs:
         - nbconvert
         - packaging >=20.9
         - papermill >=1.0.0
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - scrapbook >=0.5
     test:
       requires:
@@ -1803,7 +1805,7 @@ outputs:
         - setuptools
       run:
         - dagster {{ dagster }}.*
-        - python >={{ python_min }},<{{ python_max }}
+        - python >={{ python_min }},<{{ python_max_exclusive }}
         - wandb >=0.15.11,<1.0
     test:
       requires:
