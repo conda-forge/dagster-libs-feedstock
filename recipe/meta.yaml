@@ -789,10 +789,10 @@ outputs:
         - dagster {{ dagster }}.*
         - dataclasses
         - great-expectations >=0.17.15
-        - python >={{ python_min }},<{{ python_max }}
+        - python >=3.10,<{{ python_max }}
     test:
       requires:
-        - python {{ python_min }}
+        - python 3.10
         - pip
       imports:
         - dagster_ge
