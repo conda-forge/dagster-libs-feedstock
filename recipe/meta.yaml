@@ -978,6 +978,8 @@ outputs:
         - dagster {{ dagster }}.*
         - mlflow
         - pandas
+        # https://github.com/protocolbuffers/protobuf/issues/19430
+        - protobuf !=5.29.0
         - python >={{ python_min }},<{{ python_max_exclusive }}
     test:
       requires:
@@ -1017,7 +1019,7 @@ outputs:
         - looker-sdk <24.18.0
         - python >={{ python_min }},<{{ python_max_exclusive }}
         - python-liquid
-        - sqlglot
+        - sqlglot >=25.19.0
     test:
       requires:
         - python {{ python_min }}
@@ -1673,6 +1675,7 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         - python >={{ python_min }},<{{ python_max_exclusive }}
+        - pyopenssl >=22.1.0
         - snowflake-connector-python >=3.4.0
     test:
       requires:
