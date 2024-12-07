@@ -731,6 +731,8 @@ outputs:
       requires:
         - python {{ python_min }}
         - pip
+        # TODO: remove after https://github.com/conda-forge/dagster-libs-feedstock/issues/131
+        - protobuf >=5.28.3
       imports:
         - dagster_dbt
       commands:
