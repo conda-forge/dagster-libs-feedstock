@@ -718,10 +718,11 @@ outputs:
       run:
         - dagster {{ dagster }}.*
         # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
-        - dbt-core >=1.6,<1.9
+        - dbt-core >=1.7,<1.10
         - jinja2
         - networkx
         - orjson
+        - packaging
         - python >={{ python_min }},<{{ python_max_exclusive }}
         - requests
         - rich
