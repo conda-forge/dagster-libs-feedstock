@@ -44,7 +44,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_airbyte
       - script: dagster-airbyte --help
@@ -78,7 +78,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
           - dagster_aws
     about:
@@ -114,7 +114,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
           - dagster_celery
       - script: dagster-celery --help
@@ -149,7 +149,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_celery
     about:
@@ -181,7 +181,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_celery_k8s
     about:
@@ -211,7 +211,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
           - dagster_census
     about:
@@ -245,7 +245,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_dask
     about:
@@ -276,7 +276,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_datadog
     about:
@@ -319,7 +319,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_dbt
       - script:
@@ -353,7 +353,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_deltalake
     about:
@@ -385,7 +385,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_deltalake_pandas
     about:
@@ -420,7 +420,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_deltalake_polars
     about:
@@ -452,7 +452,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_docker
 
@@ -485,7 +485,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_duckdb
     about:
@@ -517,7 +517,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_duckdb_pandas
     about:
@@ -551,7 +551,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_duckdb_polars
     about:
@@ -584,7 +584,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_duckdb_pyspark
     about:
@@ -620,7 +620,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_fivetran
       - script:
@@ -659,7 +659,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_gcp
             - dagster_gcp.bigquery
@@ -694,7 +694,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_gcp_pandas
     about:
@@ -726,7 +726,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_gcp_pyspark
     about:
@@ -796,7 +796,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_github
     about:
@@ -833,7 +833,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_k8s
     about:
@@ -869,7 +869,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_looker
     about:
@@ -906,7 +906,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_managed_elements
       - script:
@@ -945,7 +945,7 @@ outputs:
           # as of #60, see `dagster-mlflow X requires mlflow, which is not installed``
           # due to some "clever" packaging tricks with mlflow(-skinny)
           # pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_mlflow
     about:
@@ -976,7 +976,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_msteams
     about:
@@ -1007,7 +1007,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_mysql
     about:
@@ -1040,7 +1040,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_openai
     about:
@@ -1074,7 +1074,7 @@ outputs:
           # │ │ + pip check
           # │ │ pypd 1.1.0 is not supported on this platform
           pip_check: false
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_pagerduty
     about:
@@ -1105,7 +1105,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_pandas
     about:
@@ -1137,7 +1137,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_pandera
     about:
@@ -1168,7 +1168,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_papertrail
     about:
@@ -1202,7 +1202,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_polars
     about:
@@ -1233,7 +1233,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_postgres
     about:
@@ -1263,7 +1263,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_powerbi
     about:
@@ -1294,7 +1294,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_prometheus
     about:
@@ -1326,7 +1326,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_pyspark
     about:
@@ -1359,7 +1359,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_shell
     about:
@@ -1394,7 +1394,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_sigma
       - script:
@@ -1427,7 +1427,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_slack
     about:
@@ -1459,7 +1459,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_snowflake
     about:
@@ -1489,7 +1489,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_spark
     about:
@@ -1525,7 +1525,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_snowflake_pandas
     about:
@@ -1559,7 +1559,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_snowflake_pyspark
     about:
@@ -1591,7 +1591,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_ssh
     about:
@@ -1624,7 +1624,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_tableau
     about:
@@ -1655,7 +1655,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_twilio
     about:
@@ -1689,7 +1689,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagster_wandb
     about:
@@ -1735,7 +1735,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ min_python }}
+          python_version: ${{ python_min }}
           imports:
             - dagstermill
       - script:
