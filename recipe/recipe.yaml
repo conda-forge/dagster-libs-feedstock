@@ -1,5 +1,6 @@
 context:
   version: "0.25.9"
+  python_min: ${{ python_min | default("3.9") }}
   version_major: "0.25"
   dagster: dagster ==1.9.${{ version | replace(version_major ~ ".", "") }}
   dagster_python: python >=3.9,<3.13
