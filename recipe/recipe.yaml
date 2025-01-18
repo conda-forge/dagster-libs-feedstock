@@ -8,9 +8,13 @@ context:
   dagster_dbt_core: dbt-core >=1.7,<1.10
   # utility
   pip_install: -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
 recipe:
   name: dagster-libs
   version: ${{ version }}
+
+build:
+  number: 0
 
 outputs:
   # A
