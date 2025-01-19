@@ -7,13 +7,650 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dagster-libs-fe
 About dagster-libs
 ------------------
 
-Home: https://github.com/dagster-io
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagstermill
 
 Package license: Apache-2.0
 
-Summary: The data orchestration platform built for productivity.
+Summary: A Dagster integration for papermill
 
-Documentation: https://docs.dagster.io
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-wandb
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-wandb
+
+Package license: Apache-2.0
+
+Summary: Package for wandb Dagster components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-twilio
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-twilio
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for twilio
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-tableau
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-tableau
+
+Package license: Apache-2.0
+
+Summary: Build assets representing Tableau workbooks and sheets.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-ssh
+-----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ssh
+
+Package license: Apache-2.0
+
+Summary: Package for ssh Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-spark
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-spark
+
+Package license: Apache-2.0
+
+Summary: Package for Spark Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-snowflake
+-----------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
+
+Package license: Apache-2.0
+
+Summary: Package for Snowflake Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-snowflake-pyspark
+-------------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
+
+Package license: Apache-2.0
+
+Summary: Package for integrating Snowflake and PySpark with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-snowflake-pandas
+------------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
+
+Package license: Apache-2.0
+
+Summary: Package for integrating Snowflake and Pandas with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-slack
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-slack
+
+Package license: Apache-2.0
+
+Summary: A Slack client resource for posting to Slack
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-sigma
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-sigma
+
+Package license: Apache-2.0
+
+Summary: Build assets representing Sigma dashboards.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-shell
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-shell
+
+Package license: Apache-2.0
+
+Summary: Package for Dagster shell ops.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-pyspark
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pyspark
+
+Package license: Apache-2.0
+
+Summary: Package for PySpark Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-prometheus
+------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-prometheus
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for prometheus
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-powerbi
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-powerbi
+
+Package license: Apache-2.0
+
+Summary: Build assets representing Power BI dashboards and reports.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-postgres
+----------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-postgres
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for postgres
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-polars
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for polars
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-papertrail
+------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-papertrail
+
+Package license: Apache-2.0
+
+Summary: Package for papertrail Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-pandera
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pandera
+
+Package license: Apache-2.0
+
+Summary: Integration layer for dagster and pandera.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-pandas
+--------------------
+
+Home: https://github.com/dagster-io/dagster
+
+Package license: Apache-2.0
+
+Summary: Utilities and examples for working with pandas and dagster, an opinionated framework for expressing data pipelines
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-pagerduty
+-----------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pagerduty
+
+Package license: Apache-2.0
+
+Summary: Package for pagerduty Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-openai
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-openai
+
+Package license: Apache-2.0
+
+Summary: A Open AI client resource for interacting with Open AI API
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-mysql
+-------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mysql
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for MySQL
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-msteams
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-msteams
+
+Package license: Apache-2.0
+
+Summary: A Microsoft Teams client resource for posting to Microsoft Teams
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-mlflow
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mlflow
+
+Package license: Apache-2.0
+
+Summary: Package for mlflow Dagster framework components
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-managed-elements
+------------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-managed-elements
+
+Package license: Apache-2.0
+
+Summary: Package for Managed elements with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-looker
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
+
+Package license: Apache-2.0
+
+Summary: Looker with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-k8s
+-----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-k8s
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for k8s
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-github
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-github
+
+Package license: Apache-2.0
+
+Summary: Github plugin for Dagster
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-ge
+----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ge
+
+Package license: Apache-2.0
+
+Summary: Package for GE-specific Dagster framework solid and resource components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-gcp
+-----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp
+
+Package license: Apache-2.0
+
+Summary: Package for GCP-specific Dagster framework solid and resource components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-gcp-pyspark
+-------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pyspark
+
+Package license: Apache-2.0
+
+Summary: Package for storing PySpark DataFrames in GCP
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-gcp-pandas
+------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pandas
+
+Package license: Apache-2.0
+
+Summary: Package for storing Pandas DataFrames in GCP.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-fivetran
+----------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-fivetran
+
+Package license: Apache-2.0
+
+Summary: Package for integrating Fivetran with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-duckdb
+--------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb
+
+Package license: Apache-2.0
+
+Summary: Package for DuckDB-specific Dagster framework op and resource components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-duckdb-pyspark
+----------------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
+
+Package license: Apache-2.0
+
+Summary: Package for storing PySpark DataFrames in DuckDB.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-duckdb-polars
+---------------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-polars
+
+Package license: Apache-2.0
+
+Summary: Package for storing Polars DataFrames in DuckDB.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-duckdb-pandas
+---------------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pandas
+
+Package license: Apache-2.0
+
+Summary: Package for storing Pandas DataFrames in DuckDB.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-docker
+--------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-docker
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for docker
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-deltalake
+-----------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake
+
+Package license: Apache-2.0
+
+Summary: Package for Deltalake-specific Dagster framework op and resource components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-deltalake-polars
+------------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-polars
+
+Package license: Apache-2.0
+
+Summary: Package for storing Polars DataFrames in Delta tables.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-deltalake-pandas
+------------------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-pandas
+
+Package license: Apache-2.0
+
+Summary: Package for storing Pandas DataFrames in Delta tables
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-dbt
+-----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dbt
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for dbt
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-datadog
+---------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-datadog
+
+Package license: Apache-2.0
+
+Summary: Package for datadog Dagster framework components.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-dask
+------------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dask
+
+Package license: Apache-2.0
+
+Summary: Package for using Dask as Dagster's execution engine.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-census
+--------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-census
+
+Package license: Apache-2.0
+
+Summary: Package for integrating Census with Dagster.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-celery
+--------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery
+
+Package license: Apache-2.0
+
+Summary: Package for using Celery as Dagster's execution engine.
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-celery-k8s
+------------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-k8s
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for celery-k8s-executor
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-celery-docker
+---------------------------
+
+Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-docker
+
+Package license: Apache-2.0
+
+Summary: A Dagster integration for celery-docker
+
+Documentation: https://docs.dagster.io/
+
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
+
+About dagster-aws
+-----------------
+
+Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-aws
+
+Package license: Apache-2.0
+
+Summary: Package for AWS-specific Dagster framework solid and resource components.
+
+Documentation: https://docs.dagster.io/
 
 Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
 
@@ -26,455 +663,9 @@ Package license: Apache-2.0
 
 Summary: Package for integrating Airbyte with Dagster.
 
-About dagster-aws
------------------
+Documentation: https://docs.dagster.io/
 
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-aws
-
-Package license: Apache-2.0
-
-Summary: Package for AWS-specific Dagster framework solid and resource components.
-
-About dagster-celery
---------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery
-
-Package license: Apache-2.0
-
-Summary: Package for using Celery as Dagster's execution engine.
-
-About dagster-census
---------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-census
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Census with Dagster.
-
-About dagster-dask
-------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dask
-
-Package license: Apache-2.0
-
-Summary: Package for using Dask as Dagster's execution engine.
-
-About dagster-datadog
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-datadog
-
-Package license: Apache-2.0
-
-Summary: Package for datadog Dagster framework components.
-
-About dagster-dbt
------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dbt
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for dbt
-
-About dagster-deltalake
------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake
-
-Package license: Apache-2.0
-
-Summary: Package for Deltalake-specific Dagster framework op and resource components.
-
-About dagster-docker
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-docker
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for docker
-
-About dagster-duckdb
---------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb
-
-Package license: Apache-2.0
-
-Summary: Package for DuckDB-specific Dagster framework op and resource components.
-
-About dagster-fivetran
-----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-fivetran
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Fivetran with Dagster.
-
-About dagster-github
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-github
-
-Package license: Apache-2.0
-
-Summary: Github plugin for Dagster
-
-About dagster-k8s
------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-k8s
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for k8s
-
-About dagster-looker
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
-
-Package license: Apache-2.0
-
-Summary: Looker with Dagster.
-
-About dagster-managed-elements
-------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-managed-elements
-
-Package license: Apache-2.0
-
-Summary: Package for Managed elements with Dagster.
-
-About dagster-mlflow
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mlflow
-
-Package license: Apache-2.0
-
-Summary: Package for mlflow Dagster framework components
-
-About dagster-msteams
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-msteams
-
-Package license: Apache-2.0
-
-Summary: A Microsoft Teams client resource for posting to Microsoft Teams
-
-About dagster-mysql
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mysql
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for MySQL
-
-About dagster-openai
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-openai
-
-Package license: Apache-2.0
-
-Summary: A Open AI client resource for interacting with Open AI API
-
-About dagster-pagerduty
------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pagerduty
-
-Package license: Apache-2.0
-
-Summary: Package for pagerduty Dagster framework components.
-
-About dagster-pandas
---------------------
-
-Home: https://github.com/dagster-io/dagster
-
-Package license: Apache-2.0
-
-Summary: Utilities and examples for working with pandas and dagster, an opinionated framework for expressing data pipelines
-
-About dagster-pandera
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pandera
-
-Package license: Apache-2.0
-
-Summary: Integration layer for dagster and pandera.
-
-About dagster-papertrail
-------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-papertrail
-
-Package license: Apache-2.0
-
-Summary: Package for papertrail Dagster framework components.
-
-About dagster-polars
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-polars
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for polars
-
-About dagster-postgres
-----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-postgres
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for postgres
-
-About dagster-powerbi
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-powerbi
-
-Package license: Apache-2.0
-
-Summary: Build assets representing Power BI dashboards and reports.
-
-About dagster-prometheus
-------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-prometheus
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for prometheus
-
-About dagster-shell
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-shell
-
-Package license: Apache-2.0
-
-Summary: Package for Dagster shell ops.
-
-About dagster-sigma
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-sigma
-
-Package license: Apache-2.0
-
-Summary: Build assets representing Sigma dashboards.
-
-About dagster-slack
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-slack
-
-Package license: Apache-2.0
-
-Summary: A Slack client resource for posting to Slack
-
-About dagster-snowflake
------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
-
-Package license: Apache-2.0
-
-Summary: Package for Snowflake Dagster framework components.
-
-About dagster-spark
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-spark
-
-Package license: Apache-2.0
-
-Summary: Package for Spark Dagster framework components.
-
-About dagster-ssh
------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ssh
-
-Package license: Apache-2.0
-
-Summary: Package for ssh Dagster framework components.
-
-About dagster-tableau
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-tableau
-
-Package license: Apache-2.0
-
-Summary: Build assets representing Tableau workbooks and sheets.
-
-About dagster-twilio
---------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-twilio
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for twilio
-
-About dagster-wandb
--------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-wandb
-
-Package license: Apache-2.0
-
-Summary: Package for wandb Dagster components.
-
-About dagstermill
------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagstermill
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for papermill
-
-About dagster-celery-docker
----------------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-docker
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for celery-docker
-
-About dagster-celery-k8s
-------------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-k8s
-
-Package license: Apache-2.0
-
-Summary: A Dagster integration for celery-k8s-executor
-
-About dagster-deltalake-pandas
-------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-pandas
-
-Package license: Apache-2.0
-
-Summary: Package for storing Pandas DataFrames in Delta tables
-
-About dagster-deltalake-polars
-------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-polars
-
-Package license: Apache-2.0
-
-Summary: Package for storing Polars DataFrames in Delta tables.
-
-About dagster-duckdb-pandas
----------------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pandas
-
-Package license: Apache-2.0
-
-Summary: Package for storing Pandas DataFrames in DuckDB.
-
-About dagster-duckdb-polars
----------------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-polars
-
-Package license: Apache-2.0
-
-Summary: Package for storing Polars DataFrames in DuckDB.
-
-About dagster-duckdb-pyspark
-----------------------------
-
-Home: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
-
-Package license: Apache-2.0
-
-Summary: Package for storing PySpark DataFrames in DuckDB.
-
-About dagster-gcp
------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp
-
-Package license: Apache-2.0
-
-Summary: Package for GCP-specific Dagster framework solid and resource components.
-
-About dagster-ge
-----------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ge
-
-Package license: Apache-2.0
-
-Summary: Package for GE-specific Dagster framework solid and resource components.
-
-About dagster-pyspark
----------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pyspark
-
-Package license: Apache-2.0
-
-Summary: Package for PySpark Dagster framework components.
-
-About dagster-snowflake-pandas
-------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Snowflake and Pandas with Dagster.
-
-About dagster-snowflake-pyspark
--------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Snowflake and PySpark with Dagster.
-
-About dagster-gcp-pandas
-------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pandas
-
-Package license: Apache-2.0
-
-Summary: Package for storing Pandas DataFrames in GCP.
-
-About dagster-gcp-pyspark
--------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pyspark
-
-Package license: Apache-2.0
-
-Summary: Package for storing PySpark DataFrames in GCP
+Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
 
 Current build status
 ====================
