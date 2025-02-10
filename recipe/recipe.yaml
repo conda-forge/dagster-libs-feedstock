@@ -760,7 +760,7 @@ outputs:
         - ${{ dagster_python }}
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
         - dataclasses
-        - great-expectations >=0.17.15
+        - great-expectations >=0.17.15,<1.0.0
         # must be 3.10
         # - python >=${{ python_min }}
     tests:
@@ -832,7 +832,7 @@ outputs:
         - google-auth !=2.23.1
         - python >=${{ python_min }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
-        - python-kubernetes <32
+        - python-kubernetes <33
     tests:
       - python:
           pip_check: true
