@@ -2,11 +2,11 @@
 schema_version: 1
 
 context:
-  version: "0.25.13"
+  version: "0.26.0"
   python_min: ${{ python_min | default("3.9") }}
-  version_major: '0.25'
-  dagster: dagster ==1.9.${{ version | replace(version_major ~ ".", "") }}
-  dagster_python: python >=3.9,<3.13
+  patch_version: ${{ version | split('.'))[-1] }}
+  dagster: dagster ==1.9.${{ patch_version }}
+  dagster_python: python >=${{ python_min }},<3.13
   dagster_ge_python: python >=3.10,<3.13
   # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
   dagster_dbt_core: dbt-core >=1.7,<1.10
@@ -1341,36 +1341,6 @@ outputs:
   # Q
   # R
   # S
-  - package:
-      name: dagster-shell
-    source:
-      url: https://pypi.org/packages/source/d/dagster-shell/dagster-shell-${{ version }}.tar.gz
-      sha256: 651155ae57a0ca445a42ac74ba926c956b76c9f72c10eee246554160b58676c7
-    build:
-      noarch: python
-      script: ${{ PYTHON }} ${{ pip_install }}
-    requirements:
-      host:
-        - ${{ dagster_python }}
-        - pip
-        - python ${{ python_min }}.*
-        - setuptools
-      run:
-        - ${{ dagster }}
-        - ${{ dagster_python }}
-        - python >=${{ python_min }}
-    tests:
-      - python:
-          pip_check: true
-          python_version: ${{ python_min }}
-          imports:
-            - dagster_shell
-    about:
-      homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-shell
-      license: Apache-2.0
-      license_file: LICENSE
-      summary: Package for Dagster shell ops.
-
   - package:
       name: dagster-sigma
     source:
