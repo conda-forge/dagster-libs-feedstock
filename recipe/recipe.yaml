@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.26.2
+  version: "0.26.3"
   python_min: ${{ python_min | default("3.9") }}
   patch_version: ${{ (version | split('.'))[2] }}
   dagster: dagster ==1.10.${{ patch_version }}
