@@ -15,10 +15,12 @@ context:
 
 recipe:
   name: dagster-libs
-  version: ${{ version }}
+  # the epoch is due to a historic issue with `conda-build` outputs
+  # https://github.com/conda-forge/dagster-feedstock/issues/301
+  version: "1!${{ version }}"
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # A
