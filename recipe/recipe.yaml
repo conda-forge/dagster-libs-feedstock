@@ -8,6 +8,10 @@ context:
   dagster: dagster ==1.10.${{ patch_version }}
   dagster_python: python >=${{ python_min }},<3.13
   dagster_ge_python: python >=3.10,<3.13
+  # TODO: fix upstream
+  # kombu 5.4.1 has requirement typing-extensions==4.12.2; python_version < "3.10", but you have typing-extensions 4.13.0.
+  # python_version: ${{ python_min }}
+  dagster_celery_python_test_min: "3.10"
   # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
   dagster_dbt_core: dbt-core >=1.7,<1.10
   # utility
@@ -119,10 +123,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          # TODO: fix upstream
-          # kombu 5.4.1 has requirement typing-extensions==4.12.2; python_version < "3.10", but you have typing-extensions 4.13.0.
-          # python_version: ${{ python_min }}
-          python_version: 3.10.*
+          python_version: ${{ dagster_celery_python_test_min }}.*
           imports:
             - dagster_celery
       - script: dagster-celery --help
@@ -157,9 +158,9 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ python_min }}
+          python_version: ${{ dagster_celery_python_test_min }}.*
           imports:
-            - dagster_celery
+            - dagster_celery_docker
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-celery-docker
       license: Apache-2.0
@@ -189,7 +190,7 @@ outputs:
     tests:
       - python:
           pip_check: true
-          python_version: ${{ python_min }}
+          python_version: ${{ dagster_celery_python_test_min }}.*
           imports:
             - dagster_celery_k8s
     about:
