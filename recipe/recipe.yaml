@@ -513,7 +513,7 @@ outputs:
         - ${{ dagster }}
         - ${{ dagster_python }}
         - python >=${{ python_min }}
-        - python-duckdb <0.10.0
+        - python-duckdb
     tests:
       - python:
           imports: dagster_duckdb
