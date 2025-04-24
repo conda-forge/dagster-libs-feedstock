@@ -5,6 +5,7 @@ context:
   # source-of-truth
   version: "0.26.11"
   build_number: "0"
+  python_max: "3.12"
   python_max_exclusive: "3.13"
   # package-specific
   # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
@@ -55,7 +56,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_airbyte
       - script: dagster-airbyte --help
@@ -91,7 +92,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_aws
     about:
@@ -129,7 +130,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_celery
       - script: dagster-celery --help
@@ -166,7 +167,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_celery_docker
     about:
@@ -200,7 +201,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_celery_k8s
     about:
@@ -232,7 +233,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_census
     about:
@@ -268,7 +269,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_dask
     about:
@@ -301,7 +302,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_datadog
     about:
@@ -346,7 +347,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
           imports:
             - dagster_dbt
       - script:
@@ -383,7 +384,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake
       license: Apache-2.0
@@ -416,7 +417,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-pandas
       license: Apache-2.0
@@ -452,7 +453,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-polars
       license: Apache-2.0
@@ -485,7 +486,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
 
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-docker
@@ -519,7 +520,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb
       license: Apache-2.0
@@ -552,7 +553,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pandas
       license: Apache-2.0
@@ -587,7 +588,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-polars
       license: Apache-2.0
@@ -621,7 +622,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
       license: Apache-2.0
@@ -658,7 +659,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
       - script:
           - dagster-fivetran --help
     about:
@@ -702,7 +703,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp
       license: Apache-2.0
@@ -735,7 +736,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pandas
       license: Apache-2.0
@@ -768,7 +769,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pyspark
       license: Apache-2.0
@@ -800,7 +801,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ dagster_ge_python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ge
       license: Apache-2.0
@@ -834,7 +835,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-github
       license: Apache-2.0
@@ -872,7 +873,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-k8s
       license: Apache-2.0
@@ -909,7 +910,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-looker
       license: Apache-2.0
@@ -947,7 +948,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
       - script:
           - dagster-managed-elements --help
           - dagster-me --help
@@ -988,7 +989,7 @@ outputs:
           pip_check: false
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mlflow
       license: Apache-2.0
@@ -1020,7 +1021,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-msteams
       license: Apache-2.0
@@ -1052,7 +1053,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-mysql
       license: Apache-2.0
@@ -1086,7 +1087,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-openai
       license: Apache-2.0
@@ -1121,7 +1122,7 @@ outputs:
           imports: dagster_pagerduty
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pagerduty
       license: Apache-2.0
@@ -1153,7 +1154,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster
       license: Apache-2.0
@@ -1186,7 +1187,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pandera
       license: Apache-2.0
@@ -1218,7 +1219,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-papertrail
       license: Apache-2.0
@@ -1250,7 +1251,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-postgres
       license: Apache-2.0
@@ -1281,7 +1282,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-powerbi
       license: Apache-2.0
@@ -1313,7 +1314,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-prometheus
       license: Apache-2.0
@@ -1346,7 +1347,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pyspark
       license: Apache-2.0
@@ -1385,7 +1386,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
       - script:
           - which dagster-sigma || where dagster-sigma
     about:
@@ -1419,7 +1420,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-slack
       license: Apache-2.0
@@ -1452,7 +1453,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
       license: Apache-2.0
@@ -1483,7 +1484,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-spark
       license: Apache-2.0
@@ -1520,7 +1521,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
       license: Apache-2.0
@@ -1555,7 +1556,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
       license: Apache-2.0
@@ -1588,7 +1589,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ssh
       license: Apache-2.0
@@ -1622,7 +1623,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-tableau
       license: Apache-2.0
@@ -1654,7 +1655,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-twilio
       license: Apache-2.0
@@ -1689,7 +1690,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-wandb
       license: Apache-2.0
@@ -1736,7 +1737,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - <${{ python_max_exclusive }}
+            - ${{ python_max }}.*
       - script:
           - dagstermill --help
     about:
