@@ -4,7 +4,7 @@ schema_version: 1
 context:
   # source-of-truth
   version: "0.26.11"
-  build_number: "0"
+  build_number: "1"
   python_max: "3.12"
   python_max_exclusive: "3.13"
   # package-specific
