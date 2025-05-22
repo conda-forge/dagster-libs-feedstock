@@ -1179,7 +1179,7 @@ outputs:
         - ${{ dagster }}
         - ${{ dagster_python }}
         - pandas
-        - pandera >=0.15.0
+        - pandera >=0.15.0,<0.24.0
         - python >=${{ python_min }}
     tests:
       - python:
