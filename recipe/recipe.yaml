@@ -614,7 +614,7 @@ outputs:
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
         - pandas
         - pyarrow
-        - pyspark >=3
+        - pyspark >=3,<4
         - python >=${{ python_min }}
     tests:
       - python:
@@ -761,7 +761,7 @@ outputs:
         - ${{ dagster }}
         - ${{ dagster_python }}
         - ${{ pin_subpackage("dagster-gcp", upper_bound="x.x.x") }}
-        - pyspark
+        - pyspark <4
         - python >=${{ python_min }}
     tests:
       - python:
@@ -1338,7 +1338,7 @@ outputs:
         - ${{ dagster }}
         - ${{ dagster_python }}
         - ${{ pin_subpackage("dagster-spark", upper_bound="x.x.x") }}
-        - pyspark >=3
+        - pyspark >=3,<4
         - python >=${{ python_min }}
     tests:
       - python:
@@ -1545,7 +1545,7 @@ outputs:
         - ${{ dagster }}
         - ${{ dagster_python }}
         - ${{ pin_subpackage("dagster-snowflake", upper_bound="x.x.x") }}
-        - pyspark
+        - pyspark <4
         - python >=${{ python_min }}
         - requests
         - snowflake-sqlalchemy
