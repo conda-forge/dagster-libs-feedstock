@@ -689,7 +689,7 @@ outputs:
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
         - db-dtypes
         - google-api-python-client
-        - google-cloud-bigquery-core
+        - google-cloud-bigquery-core >=1.28.3
         - google-cloud-storage
         - oauth2client
         - python >=${{ python_min }}
