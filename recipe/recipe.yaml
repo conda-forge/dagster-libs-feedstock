@@ -408,7 +408,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_max }}.*
+            - ${{ python_deltalake0_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-pandas
       license: Apache-2.0
@@ -442,7 +442,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_max }}.*
+            - ${{ python_deltalake0_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-deltalake-polars
       license: Apache-2.0
