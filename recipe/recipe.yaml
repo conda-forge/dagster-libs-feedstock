@@ -9,6 +9,7 @@ context:
   # package-specific
   # from python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
   dagster_dbt_core: dbt-core >=1.7,<1.11
+  # remove after 3.9 is EOL
   dagster_ge_python_min: "3.10"
   # pyspark 3 requires numpy 1, not built for python 3.13
   python_pyspark3_max: "3.12"
@@ -596,7 +597,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_max_pyspark3 }}.*
+            - ${{ python_pyspark3_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
       license: Apache-2.0
@@ -760,9 +761,11 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
-        - python >=${{ dagster_ge_python_min }}
+        - python >=${{ python_min }}
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
         - great-expectations >=0.17.15,<1.0.0
+      run_constraints:
+        - python >=${{ dagster_ge_python_min }}
     tests:
       - python:
           imports: dagster_ge
