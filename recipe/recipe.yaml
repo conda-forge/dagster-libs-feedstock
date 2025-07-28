@@ -11,8 +11,8 @@ context:
   dagster_dbt_core: dbt-core >=1.7,<1.11
   # remove after 3.9 is EOL
   dagster_ge_python_min: "3.10"
-  # pyspark 3 requires numpy 1, not built for python 3.13
-  python_pyspark3_max: "3.12"
+  # (pyspark <4 and great-expectations <1) require numpy <2, not built for python 3.13
+  python_numpy1_max: "3.12"
   # derived
   patch_version: ${{ (version | split('.'))[2] }}
   dagster: dagster ==1.11.${{ patch_version }}
@@ -597,7 +597,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_pyspark3_max }}.*
+            - ${{ python_numpy1_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/blob/master/python_modules/dagster-duckdb-pyspark
       license: Apache-2.0
@@ -739,7 +739,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_pyspark3_max }}.*
+            - ${{ python_numpy1_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-gcp-pyspark
       license: Apache-2.0
@@ -772,7 +772,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ dagster_ge_python_min }}.*
-            - ${{ python_max }}.*
+            - ${{ python_numpy1_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-ge
       license: Apache-2.0
@@ -1287,7 +1287,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_pyspark3_max }}.*
+            - ${{ python_numpy1_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-pyspark
       license: Apache-2.0
@@ -1487,7 +1487,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_pyspark3_max }}.*
+            - ${{ python_numpy1_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
       license: Apache-2.0
