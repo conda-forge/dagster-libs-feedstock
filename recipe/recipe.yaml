@@ -1022,6 +1022,36 @@ outputs:
   # N
   # O
   - package:
+      name: dagster-omni
+    source:
+      url: https://pypi.org/packages/source/d/dagster-omni/dagster_omni-${{ version }}.tar.gz
+      sha256: ce04e82b56f9f779600ed5aae8a943ecdb46bc2f554d51e5f5a71237ee5c69a6
+    build:
+      noarch: python
+      script: ${{ PYTHON }} ${{ pip_install }}
+    requirements:
+      host:
+        - pip
+        - python ${{ python_min }}.*
+        - setuptools
+      run:
+        - ${{ dagster }}
+        - aiohttp
+        - python >=${{ python_min }}
+    tests:
+      - python:
+          imports: dagster_openai
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - ${{ python_max }}.*
+    about:
+      homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-omni
+      license: Apache-2.0
+      license_file: LICENSE
+      summary: Package for integrating Omni with Dagster.
+
+  - package:
       name: dagster-openai
     source:
       url: https://pypi.org/packages/source/d/dagster-openai/dagster_openai-${{ version }}.tar.gz
