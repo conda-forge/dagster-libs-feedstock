@@ -1040,7 +1040,7 @@ outputs:
         - python >=${{ python_min }}
     tests:
       - python:
-          imports: dagster_openai
+          imports: dagster_omni
           pip_check: true
           python_version:
             - ${{ python_min }}.*
