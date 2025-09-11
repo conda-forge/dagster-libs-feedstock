@@ -1038,6 +1038,7 @@ outputs:
         - ${{ dagster }}
         - aiohttp
         - python >=${{ python_min }}
+        - python-dateutil
     tests:
       - python:
           imports: dagster_omni
