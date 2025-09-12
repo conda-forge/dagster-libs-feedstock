@@ -317,6 +317,8 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
+        # see https://github.com/dagster-io/dagster/blob/master/python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
+        - dbt-core >=1.7,<1.11
         - jinja2
         - networkx
         - orjson
