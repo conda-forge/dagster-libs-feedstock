@@ -445,6 +445,36 @@ outputs:
       summary: Package for storing Polars DataFrames in Delta tables.
 
   - package:
+      name: dagster-dlt
+    source:
+      url: https://pypi.org/packages/source/d/dagster-dlt/dagster_dlt-${{ version }}.tar.gz
+      sha256: a446e5fca7dacfea4e67a8e9ac944273f46ab8717e69e3a507a058dcf5d966c2
+    build:
+      noarch: python
+      script: ${{ PYTHON }} ${{ pip_install }}
+    requirements:
+      host:
+        - pip
+        - python ${{ python_min }}.*
+        - setuptools
+      run:
+        - ${{ dagster }}
+        - dlt >=0.4
+        - python >=${{ python_min }}
+    tests:
+      - python:
+          imports: dagster_dlt
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - ${{ python_max }}.*
+    about:
+      homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-dlt
+      license: Apache-2.0
+      license_file: LICENSE
+      summary: This library provides a Dagster integration with dlt
+
+  - package:
       name: dagster-docker
     source:
       url: https://pypi.org/packages/source/d/dagster-docker/dagster_docker-${{ version }}.tar.gz
