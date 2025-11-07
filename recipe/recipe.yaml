@@ -319,6 +319,7 @@ outputs:
         - ${{ dagster }}
         # see https://github.com/dagster-io/dagster/blob/master/python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
         - dbt-core >=1.7,<1.11
+        - gitpython
         - jinja2
         - networkx
         - orjson
@@ -865,7 +866,7 @@ outputs:
         - google-auth !=2.23.1
         - python >=${{ python_min }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
-        - python-kubernetes <33
+        - python-kubernetes <35
     tests:
       - python:
           imports: dagster_k8s
