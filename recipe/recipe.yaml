@@ -14,6 +14,10 @@ context:
   dagster: dagster ==1.12.${{ patch_version }}
   # utility
   pip_install: -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  # 0.28.3: this (and other `dagster-snowflake`) are skipped because of new
+  # dependencies, described below
+  skip_snowflake: "1"
+
 
 recipe:
   name: dagster-libs
@@ -1436,6 +1440,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake/dagster_snowflake-${{ version }}.tar.gz
       sha256: b83834c8d8221588182af0b2f338ecf8ef25c79112e320a1f04ba0ea3ea1171f
     build:
+      skip: ${{ skip_snowflake | bool }}
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
@@ -1448,6 +1453,18 @@ outputs:
         - pyopenssl >=22.1.0
         - python >=${{ python_min }}
         - snowflake-connector-python >=3.4.0
+        # the following are required, but present some packaging challenges
+        #
+        # https://pypi.org/project/snowflake.core
+        #
+        #   probably fine (upstream lists as `snowflake-core`, but resolves to `.`)
+        - snowflake.core >=1.8.0  # not too bad, actually
+        # https://pypi.org/project/snowflake-snowpark-python
+        #
+        #   a good deal of build system challenges, including a build dep on the
+        #   rather odd `protoc-wheel-0`: no source distributions, wheels contain `protoc.exe`
+        #   see https://pypi.org/project/protoc-wheel-0/
+        - snowflake-snowpark-python >=1.24.0
     tests:
       - python:
           imports: dagster_snowflake
@@ -1496,6 +1513,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pandas/dagster_snowflake_pandas-${{ version }}.tar.gz
       sha256: caad809255c120c406d9966679577b189d09207b7a48f311a4b22f750965f9d6
     build:
+      skip: ${{ skip_snowflake | bool }}
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
@@ -1531,6 +1549,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pyspark/dagster_snowflake_pyspark-${{ version }}.tar.gz
       sha256: 5c0754cd00ce30ad962680d84b52eb37c5f919c6dc4a37a359be4cbb2ec437dd
     build:
+      skip: ${{ skip_snowflake | bool }}
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
