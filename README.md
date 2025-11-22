@@ -550,45 +550,6 @@ Documentation: https://docs.dagster.io/
 
 Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
 
-About dagster-snowflake
------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
-
-Package license: Apache-2.0
-
-Summary: Package for Snowflake Dagster framework components.
-
-Documentation: https://docs.dagster.io/
-
-Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
-
-About dagster-snowflake-pandas
-------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Snowflake and Pandas with Dagster.
-
-Documentation: https://docs.dagster.io/
-
-Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
-
-About dagster-snowflake-pyspark
--------------------------------
-
-Home: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
-
-Package license: Apache-2.0
-
-Summary: Package for integrating Snowflake and PySpark with Dagster.
-
-Documentation: https://docs.dagster.io/
-
-Dagster is a system for building modern data applications. Combining an elegant programming model and beautiful tools, Dagster allows infrastructure engineers, data engineers, and data scientists to seamlessly collaborate to process and produce the trusted, reliable data needed in today's world.
-
 About dagster-spark
 -------------------
 
@@ -727,9 +688,6 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--pyspark-green.svg)](https://anaconda.org/conda-forge/dagster-pyspark) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-pyspark.svg)](https://anaconda.org/conda-forge/dagster-pyspark) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-pyspark.svg)](https://anaconda.org/conda-forge/dagster-pyspark) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-pyspark.svg)](https://anaconda.org/conda-forge/dagster-pyspark) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--sigma-green.svg)](https://anaconda.org/conda-forge/dagster-sigma) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-sigma.svg)](https://anaconda.org/conda-forge/dagster-sigma) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-sigma.svg)](https://anaconda.org/conda-forge/dagster-sigma) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-sigma.svg)](https://anaconda.org/conda-forge/dagster-sigma) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--slack-green.svg)](https://anaconda.org/conda-forge/dagster-slack) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-slack.svg)](https://anaconda.org/conda-forge/dagster-slack) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-slack.svg)](https://anaconda.org/conda-forge/dagster-slack) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-slack.svg)](https://anaconda.org/conda-forge/dagster-slack) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--snowflake-green.svg)](https://anaconda.org/conda-forge/dagster-snowflake) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-snowflake.svg)](https://anaconda.org/conda-forge/dagster-snowflake) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-snowflake.svg)](https://anaconda.org/conda-forge/dagster-snowflake) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-snowflake.svg)](https://anaconda.org/conda-forge/dagster-snowflake) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--snowflake--pandas-green.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pandas) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-snowflake-pandas.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pandas) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-snowflake-pandas.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pandas) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-snowflake-pandas.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pandas) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--snowflake--pyspark-green.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pyspark) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-snowflake-pyspark.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pyspark) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-snowflake-pyspark.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pyspark) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-snowflake-pyspark.svg)](https://anaconda.org/conda-forge/dagster-snowflake-pyspark) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--spark-green.svg)](https://anaconda.org/conda-forge/dagster-spark) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-spark.svg)](https://anaconda.org/conda-forge/dagster-spark) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-spark.svg)](https://anaconda.org/conda-forge/dagster-spark) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-spark.svg)](https://anaconda.org/conda-forge/dagster-spark) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--ssh-green.svg)](https://anaconda.org/conda-forge/dagster-ssh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-ssh.svg)](https://anaconda.org/conda-forge/dagster-ssh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-ssh.svg)](https://anaconda.org/conda-forge/dagster-ssh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-ssh.svg)](https://anaconda.org/conda-forge/dagster-ssh) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagster--tableau-green.svg)](https://anaconda.org/conda-forge/dagster-tableau) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagster-tableau.svg)](https://anaconda.org/conda-forge/dagster-tableau) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagster-tableau.svg)](https://anaconda.org/conda-forge/dagster-tableau) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagster-tableau.svg)](https://anaconda.org/conda-forge/dagster-tableau) |
@@ -747,16 +705,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `dagster-airbyte, dagster-aws, dagster-celery, dagster-celery-docker, dagster-celery-k8s, dagster-census, dagster-dask, dagster-datadog, dagster-dbt, dagster-deltalake, dagster-deltalake-pandas, dagster-deltalake-polars, dagster-dlt, dagster-docker, dagster-duckdb, dagster-duckdb-pandas, dagster-duckdb-polars, dagster-duckdb-pyspark, dagster-fivetran, dagster-gcp, dagster-gcp-pandas, dagster-gcp-pyspark, dagster-ge, dagster-github, dagster-k8s, dagster-looker, dagster-managed-elements, dagster-mlflow, dagster-msteams, dagster-mysql, dagster-omni, dagster-openai, dagster-pagerduty, dagster-pandas, dagster-pandera, dagster-papertrail, dagster-postgres, dagster-powerbi, dagster-prometheus, dagster-pyspark, dagster-sigma, dagster-slack, dagster-snowflake, dagster-snowflake-pandas, dagster-snowflake-pyspark, dagster-spark, dagster-ssh, dagster-tableau, dagster-twilio, dagster-wandb, dagstermill` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `dagster-airbyte, dagster-aws, dagster-celery, dagster-celery-docker, dagster-celery-k8s, dagster-census, dagster-dask, dagster-datadog, dagster-dbt, dagster-deltalake, dagster-deltalake-pandas, dagster-deltalake-polars, dagster-dlt, dagster-docker, dagster-duckdb, dagster-duckdb-pandas, dagster-duckdb-polars, dagster-duckdb-pyspark, dagster-fivetran, dagster-gcp, dagster-gcp-pandas, dagster-gcp-pyspark, dagster-ge, dagster-github, dagster-k8s, dagster-looker, dagster-managed-elements, dagster-mlflow, dagster-msteams, dagster-mysql, dagster-omni, dagster-openai, dagster-pagerduty, dagster-pandas, dagster-pandera, dagster-papertrail, dagster-postgres, dagster-powerbi, dagster-prometheus, dagster-pyspark, dagster-sigma, dagster-slack, dagster-spark, dagster-ssh, dagster-tableau, dagster-twilio, dagster-wandb, dagstermill` can be installed with `conda`:
 
 ```
-conda install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
+conda install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
 ```
 
 or with `mamba`:
 
 ```
-mamba install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
+mamba install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
 ```
 
 It is possible to list all of the versions of `dagster-airbyte` available on your platform with `conda`:
