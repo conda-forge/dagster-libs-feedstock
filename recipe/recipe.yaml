@@ -466,7 +466,8 @@ outputs:
     tests:
       - python:
           imports: dagster_dlt
-          pip_check: true
+          # TODO: fix after https://github.com/conda-forge/dlt-feedstock/pull/50
+          pip_check: false
           python_version:
             - ${{ python_min }}.*
             - ${{ python_max }}.*
