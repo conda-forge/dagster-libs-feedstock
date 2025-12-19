@@ -601,6 +601,7 @@ outputs:
       license: Apache-2.0
       license_file: LICENSE
       summary: Package for storing Polars DataFrames in DuckDB.
+
   - package:
       name: dagster-duckdb-pyspark
     source:
