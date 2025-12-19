@@ -5,7 +5,7 @@
 
 [workspace]
 name = "dagster-libs-feedstock"
-version = "3.53.3"  # conda-smithy version used to generate this file
+version = "3.54.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/dagster-libs-feedstock"
 authors = ["@conda-forge/dagster-libs"]
 channels = ["conda-forge"]
@@ -23,12 +23,18 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build dagster-libs-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
-description = "Build dagster-libs-feedstock with variant linux_64_ directly (without setup scripts)"
-[tasks."inspect-linux_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
-description = "List contents of dagster-libs-feedstock packages built for variant linux_64_"
+[tasks."build-linux_64_python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python_min3.10.yaml"
+description = "Build dagster-libs-feedstock with variant linux_64_python_min3.10 directly (without setup scripts)"
+[tasks."inspect-linux_64_python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python_min3.10.yaml"
+description = "List contents of dagster-libs-feedstock packages built for variant linux_64_python_min3.10"
+[tasks."build-linux_64_python_min3.13"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python_min3.13.yaml"
+description = "Build dagster-libs-feedstock with variant linux_64_python_min3.13 directly (without setup scripts)"
+[tasks."inspect-linux_64_python_min3.13"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python_min3.13.yaml"
+description = "List contents of dagster-libs-feedstock packages built for variant linux_64_python_min3.13"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
