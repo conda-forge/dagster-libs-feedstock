@@ -23,12 +23,18 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build dagster-libs-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
-description = "Build dagster-libs-feedstock with variant linux_64_ directly (without setup scripts)"
-[tasks."inspect-linux_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
-description = "List contents of dagster-libs-feedstock packages built for variant linux_64_"
+[tasks."build-linux_64_python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python_min3.10.yaml"
+description = "Build dagster-libs-feedstock with variant linux_64_python_min3.10 directly (without setup scripts)"
+[tasks."inspect-linux_64_python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python_min3.10.yaml"
+description = "List contents of dagster-libs-feedstock packages built for variant linux_64_python_min3.10"
+[tasks."build-linux_64_python_min3.14"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python_min3.14.yaml"
+description = "Build dagster-libs-feedstock with variant linux_64_python_min3.14 directly (without setup scripts)"
+[tasks."inspect-linux_64_python_min3.14"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python_min3.14.yaml"
+description = "List contents of dagster-libs-feedstock packages built for variant linux_64_python_min3.14"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
