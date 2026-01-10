@@ -1185,7 +1185,8 @@ outputs:
       sha256: a3c68659569d97c32a139171d0d62484536e4db06bfb33a0e36aecc54f5af5de
     build:
       noarch: python
-      skip: python_min != real_python_min
+      # needed by dagster-gcp
+      # skip: python_min != real_python_min
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
