@@ -529,7 +529,8 @@ outputs:
       sha256: 76eddbfed367780d33c5a86235d5c20af5b74bf78b34f7baea4d12585f1958c3
     build:
       noarch: python
-      skip: python_min != real_python_min
+      # used by dagster-duckdb-pyspark
+      # skip: python_min != real_python_min
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
@@ -1473,7 +1474,8 @@ outputs:
       sha256: 990a6a8b1a69b1e4774df833497cd06c4ab2c594abb10e8686a6cbdfeaf221d2
     build:
       noarch: python
-      skip: python_min != real_python_min
+      # used by other dagster-*-pyspark
+      # skip: python_min != real_python_min
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
