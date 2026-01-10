@@ -702,7 +702,8 @@ outputs:
       sha256: aac38f323f90188331eee88135dcd179afc477da4a2de0a7ca566fcbdb9fbada
     build:
       noarch: python
-      skip: python_min != real_python_min
+      # needed by dagster-gcp-pyspark
+      # skip: python_min != real_python_min
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
