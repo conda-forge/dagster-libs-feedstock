@@ -1487,7 +1487,7 @@ outputs:
         - pyopenssl >=22.1.0
         - python >=${{ python_min }}
         - snowflake-connector-python >=3.4.0
-        - snowflake-core >=1.8.0
+        - snowflake.core >=1.8.0
         - snowflake-snowpark-python >=1.24.0
     tests:
       - python:
