@@ -12,6 +12,11 @@ context:
   # pyspark
   pyspark_min: ${{ "3.5" if python_min == real_python_min else "4.1" }}
   pyspark_max: ${{ "4.0" if python_min == real_python_min else "" }}
+  # snowflake
+  ## see https://github.com/conda-forge/snowflake-snowpark-python-feedstock/pull/95
+  python_snowflake_max: "3.13"
+  ## see https://github.com/conda-forge/dagster-libs-feedstock/issues/203
+  python_snowflake_pyspark_max: "3.12"
   # utility
   pip_install: -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
@@ -1475,6 +1480,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake/dagster_snowflake-${{ version }}.tar.gz
       sha256: 09bf0440b0884b634bcda4365451531de72f53bee0c1f745a022e4b827cda508
     build:
+      skip: python_min != real_python_min
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
@@ -1495,7 +1501,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_max }}.*
+            - ${{ python_snowflake_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake
       license: Apache-2.0
@@ -1508,6 +1514,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pandas/dagster_snowflake_pandas-${{ version }}.tar.gz
       sha256: 1fa63b5ecbceda0ad3ad50c3d2ed518cfa563f6bc2e62f83f97701f51f185c98
     build:
+      skip: python_min != real_python_min
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
@@ -1530,7 +1537,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - ${{ python_max }}.*
+            - ${{ python_snowflake_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pandas
       license: Apache-2.0
@@ -1543,6 +1550,7 @@ outputs:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pyspark/dagster_snowflake_pyspark-${{ version }}.tar.gz
       sha256: fce4b71bd229e0569519d52039f6c84f69710eb42ff0fb4c588d51ab55196b96
     build:
+      skip: python_min != real_python_min
       noarch: python
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
@@ -1563,7 +1571,7 @@ outputs:
           pip_check: true
           python_version:
             - ${{ python_min }}.*
-            - 3.13.*
+            - ${{ python_snowflake_pyspark_max }}.*
     about:
       homepage: https://github.com/dagster-io/dagster/tree/master/python_modules/libraries/dagster-snowflake-pyspark
       license: Apache-2.0
