@@ -894,7 +894,7 @@ outputs:
         - google-auth !=2.23.1
         - python >=${{ python_min }}
         # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
-        - python-kubernetes <35
+        - python-kubernetes <36
     tests:
       - python:
           imports: dagster_k8s
