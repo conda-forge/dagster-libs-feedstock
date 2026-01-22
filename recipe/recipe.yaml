@@ -1233,6 +1233,7 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
+        - pandas <${{ pandas_max }}
         - pandera >=0.24.0
         - python >=${{ python_min }}
     tests:
