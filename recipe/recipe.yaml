@@ -267,6 +267,13 @@ outputs:
         - dask >=1.2.2
         - distributed >=1.28.1
         - python >=${{ python_min }}
+      run_constraints:
+        # https://github.com/conda-forge/dagster-libs-feedstock/pull/217
+        # vs dask 2023.3.0
+        #    File "$PREFIX/lib/python3.14/site-packages/dask/array/einsumfuncs.py", line 2, in <module>
+        #      from numpy.compat import basestring
+        #  ModuleNotFoundError: No module named 'numpy.compat'
+        - dask >=2024
     tests:
       - python:
           pip_check: true
