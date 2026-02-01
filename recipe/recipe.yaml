@@ -267,6 +267,13 @@ outputs:
         - dask >=1.2.2
         - distributed >=1.28.1
         - python >=${{ python_min }}
+      run_constraints:
+        # https://github.com/conda-forge/dagster-libs-feedstock/pull/217
+        # vs dask 2023.3.0
+        #    File "$PREFIX/lib/python3.14/site-packages/dask/array/einsumfuncs.py", line 2, in <module>
+        #      from numpy.compat import basestring
+        #  ModuleNotFoundError: No module named 'numpy.compat'
+        - dask >=2024
     tests:
       - python:
           pip_check: true
@@ -1008,6 +1015,13 @@ outputs:
         - python >=${{ python_min }}
         # https://github.com/protocolbuffers/protobuf/issues/19430
         - protobuf !=5.29.0
+      run_constraints:
+        # https://github.com/conda-forge/dagster-libs-feedstock/pull/217
+        # fails with mlflow 1.26.1
+        #    File "$SRC_DIR_env/lib/python3.10/site-packages/mlflow/protos/service_pb2.py", line 11, in <module>
+        #      from google.protobuf import service as _service
+        #    ImportError: cannot import name 'service' from 'google.protobuf' ($SRC_DIR_env/lib/python3.10/site-packages/google/protobuf/__init__.py)
+        - mlflow >=2
     tests:
       - python:
           # as of #60, see `dagster-mlflow X requires mlflow, which is not installed``
