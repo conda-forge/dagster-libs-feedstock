@@ -10,15 +10,11 @@ context:
   # derived
   patch_version: ${{ (version | split('.'))[2] }}
   dagster: dagster ==1.12.${{ patch_version }}
-  # pyspark
-  pyspark_min: ${{ "3.5" if python_min == real_python_min else "4.1" }}
-  pyspark_max: ${{ "4.0" if python_min == real_python_min else "" }}
   # snowflake
   ## see https://github.com/conda-forge/snowflake-snowpark-python-feedstock/pull/95
   python_snowflake_max: "3.13"
   ## see https://github.com/conda-forge/dagster-libs-feedstock/issues/203
   python_snowflake_pyspark_max: "3.12"
-  pandas_max: "3.0.0"
   # utility
   pip_install: -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
@@ -127,7 +123,7 @@ outputs:
       run:
         - ${{ dagster }}
         - celery >=4.3.0
-        - click >=5.0,<9
+        - click >=5.0,<9.0
         - python >=${{ python_min }}
     tests:
       - python:
@@ -165,7 +161,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-celery", upper_bound="x.x.x") }}
-        - dagster-graphql
+        - dagster-graphql ==1.12.15
         - docker-py
         - python >=${{ python_min }}
     tests:
@@ -340,7 +336,6 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
-        # see https://github.com/dagster-io/dagster/blob/master/python_modules/libraries/dagster-dbt/dagster_dbt/dbt_core_version.py
         - dbt-core >=1.7,<1.12
         - gitpython
         - jinja2
@@ -348,7 +343,6 @@ outputs:
         - orjson
         - packaging
         - python >=${{ python_min }}
-        - python-dateutil
         - requests
         - rich
         - sqlglot-rs <28.1.0
@@ -422,7 +416,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-deltalake", upper_bound="x.x.x") }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - python >=${{ python_min }}
     tests:
       - python:
@@ -455,10 +449,8 @@ outputs:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-deltalake", upper_bound="x.x.x") }}
         - polars
+        - pyarrow
         - python >=${{ python_min }}
-        # TODO: update after https://github.com/conda-forge/polars-feedstock/issues/194
-        # for now https://github.com/pola-rs/polars/blob/main/py-polars/pyproject.toml#L52C13-L52C29
-        - pyarrow >=7.0.0
     tests:
       - python:
           imports: dagster_deltalake_polars
@@ -585,7 +577,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - python >=${{ python_min }}
     tests:
       - python:
@@ -617,10 +609,9 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
-        - pyarrow >=4.0.0
-        - python >=${{ python_min }}
-        # TODO: get polars-with-X outputs
         - polars
+        - pyarrow
+        - python >=${{ python_min }}
     tests:
       - python:
           imports: dagster_duckdb_polars
@@ -651,10 +642,13 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - pyarrow
-        - pyspark >=${{ pyspark_min }}${{ ",<" ~ pyspark_max if pyspark_max else "" }}
         - python >=${{ python_min }}
+        - if: match(python_min, "<3.14")
+          then: pyspark >=3.5,<4
+        - if: match(python_min, ">=3.14")
+          then: pyspark >=4.1
     tests:
       - python:
           imports: dagster_duckdb_pyspark
@@ -689,7 +683,6 @@ outputs:
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
-        - requests
     tests:
       - python:
           imports: dagster_fivetran
@@ -767,7 +760,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-gcp", upper_bound="x.x.x") }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - python >=${{ python_min }}
     tests:
       - python:
@@ -799,8 +792,11 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-gcp", upper_bound="x.x.x") }}
-        - pyspark >=${{ pyspark_min }}${{ ",<" ~ pyspark_max if pyspark_max else "" }}
         - python >=${{ python_min }}
+        - if: match(python_min, "<3.14")
+          then: pyspark >=3.5,<4
+        - if: match(python_min, ">=3.14")
+          then: pyspark >=4.1
     tests:
       - python:
           imports: dagster_gcp_pyspark
@@ -829,9 +825,10 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
-        - python >=${{ python_min }}
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
         - great-expectations >=0.17.15,<1.0.0
+        - pandas <3.0.0
+        - python >=${{ python_min }}
     tests:
       - python:
           imports: dagster_ge
@@ -900,7 +897,6 @@ outputs:
         - ${{ dagster }}
         - google-auth !=2.23.1
         - python >=${{ python_min }}
-        # from python_modules/libraries/dagster-k8s/dagster_k8s/kubernetes_version.py
         - python-kubernetes <36
     tests:
       - python:
@@ -1011,10 +1007,9 @@ outputs:
       run:
         - ${{ dagster }}
         - mlflow
-        - pandas <${{ pandas_max }}
-        - python >=${{ python_min }}
-        # https://github.com/protocolbuffers/protobuf/issues/19430
+        - pandas <3.0.0
         - protobuf !=5.29.0
+        - python >=${{ python_min }}
       run_constraints:
         # https://github.com/conda-forge/dagster-libs-feedstock/pull/217
         # fails with mlflow 1.26.1
@@ -1216,7 +1211,7 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - python >=${{ python_min }}
     tests:
       - python:
@@ -1247,7 +1242,7 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
-        - pandas <${{ pandas_max }}
+        - pandas <3.0.0
         - pandera >=0.24.0
         - python >=${{ python_min }}
     tests:
@@ -1510,8 +1505,8 @@ outputs:
         - pyopenssl >=22.1.0
         - python >=${{ python_min }}
         - snowflake-connector-python >=3.4.0
-        - snowflake.core >=1.8.0
         - snowflake-snowpark-python >=1.24.0
+        - snowflake.core >=1.8.0
     tests:
       - python:
           imports: dagster_snowflake
@@ -1542,10 +1537,11 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-snowflake", upper_bound="x.x.x") }}
-        - pandas <${{ pandas_max }}
+        - pandas
+        - pandas <3.0.0
         - python >=${{ python_min }}
         - requests
-        - snowflake-connector-python >=2.1.0
+        - snowflake-connector-python
         - snowflake-sqlalchemy >=1.2
         - sqlalchemy !=1.4.42
     tests:
@@ -1582,6 +1578,7 @@ outputs:
         - python >=${{ python_min }}
         - requests
         - snowflake-sqlalchemy >=1.2
+        - sqlalchemy !=1.4.42
     tests:
       - python:
           imports: dagster_snowflake_pyspark
@@ -1675,6 +1672,7 @@ outputs:
         - setuptools
       run:
         - ${{ dagster }}
+        - cryptography >=1.4
         - pyjwt
         - python >=${{ python_min }}
         - tableauserverclient >=0.32
@@ -1788,7 +1786,7 @@ outputs:
         - packaging >=20.9
         - papermill >=1.0.0
         - python >=${{ python_min }}
-        - scrapbook >=0.5
+        - scrapbook >=0.5.0
     tests:
       - python:
           imports: dagstermill
