@@ -44,9 +44,9 @@ outputs:
           - dagster-airbyte = dagster_airbyte.cli:main
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -80,9 +80,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - boto3
@@ -118,9 +118,9 @@ outputs:
           - dagster-celery = dagster_celery.cli:main
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - celery >=4.3.0
@@ -156,9 +156,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-celery", upper_bound="x.x.x") }}
@@ -190,9 +190,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-celery", upper_bound="x.x.x") }}
@@ -223,9 +223,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -255,9 +255,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - bokeh
@@ -296,9 +296,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - datadog
@@ -332,9 +332,9 @@ outputs:
           - dagster-dbt = dagster_dbt.cli.app:app
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - dbt-core >=1.7,<1.12
@@ -379,9 +379,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - deltalake >=1.0.0
@@ -411,9 +411,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-deltalake", upper_bound="x.x.x") }}
@@ -443,9 +443,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-deltalake", upper_bound="x.x.x") }}
@@ -476,9 +476,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - dlt >=0.4
@@ -507,9 +507,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - docker-image-py
@@ -541,9 +541,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -572,9 +572,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
@@ -604,9 +604,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
@@ -637,9 +637,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-duckdb", upper_bound="x.x.x") }}
@@ -678,9 +678,9 @@ outputs:
           - dagster-fivetran = dagster_fivetran.cli:main
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -715,9 +715,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
@@ -755,9 +755,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-gcp", upper_bound="x.x.x") }}
@@ -787,9 +787,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-gcp", upper_bound="x.x.x") }}
@@ -821,9 +821,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-pandas", upper_bound="x.x.x") }}
@@ -854,9 +854,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - cryptography >=1.4
@@ -891,9 +891,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - google-auth !=2.23.1
@@ -924,9 +924,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - cattrs <23.2
@@ -964,9 +964,9 @@ outputs:
           - dagster-me = dagster_managed_elements.cli:main
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - click-spinner
@@ -1002,9 +1002,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - mlflow
@@ -1045,9 +1045,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1076,9 +1076,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - mysql-connector-python
@@ -1109,9 +1109,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - aiohttp
@@ -1141,9 +1141,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - openai
@@ -1173,9 +1173,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - pypd
@@ -1207,9 +1207,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - pandas <3.0.0
@@ -1238,9 +1238,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - pandas <3.0.0
@@ -1270,9 +1270,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1300,9 +1300,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - psycopg2-binary
@@ -1331,9 +1331,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1361,9 +1361,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - prometheus_client
@@ -1392,9 +1392,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-spark", upper_bound="x.x.x") }}
@@ -1430,9 +1430,9 @@ outputs:
           - dagster-sigma = dagster_sigma.cli:app
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - aiohttp
@@ -1467,9 +1467,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1498,9 +1498,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - pyopenssl >=22.1.0
@@ -1532,9 +1532,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-snowflake", upper_bound="x.x.x") }}
@@ -1569,9 +1569,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-snowflake", upper_bound="x.x.x") }}
@@ -1605,9 +1605,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1635,9 +1635,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - paramiko
@@ -1668,9 +1668,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - cryptography >=1.4
@@ -1701,9 +1701,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1735,9 +1735,9 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
@@ -1775,9 +1775,9 @@ outputs:
           - dagstermill = dagstermill.cli:main
     requirements:
       host:
+        - hatchling >=1.19.0
         - pip
         - python ${{ python_min }}.*
-        - setuptools
       run:
         - ${{ dagster }}
         - ipykernel >=4.9.0,!=5.4.0,!=5.4.1
