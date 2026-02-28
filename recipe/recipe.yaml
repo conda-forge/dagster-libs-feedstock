@@ -9,7 +9,8 @@ context:
   real_python_min: "3.10"
   # derived
   patch_version: ${{ (version | split('.'))[2] }}
-  dagster: dagster ==1.12.${{ patch_version }}
+  dagster_version: 1.12.${{ patch_version }}
+  dagster: dagster ${{ dagster_version }}.*
   # snowflake
   ## see https://github.com/conda-forge/snowflake-snowpark-python-feedstock/pull/95
   python_snowflake_max: "3.13"
@@ -161,7 +162,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-celery", upper_bound="x.x.x") }}
-        - dagster-graphql ==1.12.15
+        - dagster-graphql ${{ dagster_version }}.*
         - docker-py
         - python >=${{ python_min }}
     tests:
