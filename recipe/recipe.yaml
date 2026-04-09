@@ -9,7 +9,7 @@ context:
   real_python_min: "3.10"
   # derived
   patch_version: ${{ (version | split('.'))[2] }}
-  dagster_version: 1.12.${{ patch_version }}
+  dagster_version: 1.13.${{ patch_version }}
   dagster: dagster ${{ dagster_version }}.*
   # snowflake
   ## see https://github.com/conda-forge/snowflake-snowpark-python-feedstock/pull/95
