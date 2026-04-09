@@ -328,8 +328,8 @@ outputs:
       script: ${{ PYTHON }} ${{ pip_install }}
       python:
         entry_points:
-          - dagster-dbt-cloud = dagster_dbt.cloud.cli:app
           - dagster-dbt = dagster_dbt.cli.app:app
+          - dagster-dbt-cloud = dagster_dbt.cloud.cli:app
     requirements:
       host:
         - hatchling >=1.19.0
