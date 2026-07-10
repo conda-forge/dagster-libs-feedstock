@@ -1641,6 +1641,7 @@ outputs:
         - python ${{ python_min }}.*
       run:
         - ${{ dagster }}
+        - cffi >=2.0.0
         - paramiko
         - python >=${{ python_min }}
         - sshtunnel
