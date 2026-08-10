@@ -1576,6 +1576,7 @@ outputs:
       run:
         - ${{ dagster }}
         - ${{ pin_subpackage("dagster-snowflake", upper_bound="x.x.x") }}
+        - pyspark !=2.4.4
         - pyspark <4
         - python >=${{ python_min }}
         - requests
