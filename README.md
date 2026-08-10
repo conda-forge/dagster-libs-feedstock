@@ -748,31 +748,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `dagster-airbyte, dagster-aws, dagster-celery, dagster-celery-docker, dagster-celery-k8s, dagster-census, dagster-dask, dagster-datadog, dagster-dbt, dagster-deltalake, dagster-deltalake-pandas, dagster-deltalake-polars, dagster-dlt, dagster-docker, dagster-duckdb, dagster-duckdb-pandas, dagster-duckdb-polars, dagster-duckdb-pyspark, dagster-fivetran, dagster-gcp, dagster-gcp-pandas, dagster-gcp-pyspark, dagster-ge, dagster-github, dagster-k8s, dagster-looker, dagster-managed-elements, dagster-mlflow, dagster-msteams, dagster-mysql, dagster-omni, dagster-openai, dagster-pagerduty, dagster-pandas, dagster-pandera, dagster-papertrail, dagster-postgres, dagster-powerbi, dagster-prometheus, dagster-pyspark, dagster-sigma, dagster-slack, dagster-snowflake, dagster-snowflake-pandas, dagster-snowflake-pyspark, dagster-spark, dagster-ssh, dagster-tableau, dagster-twilio, dagster-wandb, dagstermill` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
 ```
 
-It is possible to list all of the versions of `dagster-airbyte` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
+# for installing globally
+pixi global install dagster-airbyte dagster-aws dagster-celery dagster-celery-docker dagster-celery-k8s dagster-census dagster-dask dagster-datadog dagster-dbt dagster-deltalake dagster-deltalake-pandas dagster-deltalake-polars dagster-dlt dagster-docker dagster-duckdb dagster-duckdb-pandas dagster-duckdb-polars dagster-duckdb-pyspark dagster-fivetran dagster-gcp dagster-gcp-pandas dagster-gcp-pyspark dagster-ge dagster-github dagster-k8s dagster-looker dagster-managed-elements dagster-mlflow dagster-msteams dagster-mysql dagster-omni dagster-openai dagster-pagerduty dagster-pandas dagster-pandera dagster-papertrail dagster-postgres dagster-powerbi dagster-prometheus dagster-pyspark dagster-sigma dagster-slack dagster-snowflake dagster-snowflake-pandas dagster-snowflake-pyspark dagster-spark dagster-ssh dagster-tableau dagster-twilio dagster-wandb dagstermill
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `dagster-airbyte` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search dagster-airbyte --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search dagster-airbyte --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search dagster-airbyte --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -784,6 +826,8 @@ mamba repoquery whoneeds dagster-airbyte --channel conda-forge
 # List dependencies of `dagster-airbyte`:
 mamba repoquery depends dagster-airbyte --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
