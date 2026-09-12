@@ -3,10 +3,10 @@ schema_version: 1
 
 context:
   # source-of-truth
-  version: "0.29.21"
+  version: "0.29.22"
   python_max: "3.14"
   # to be adjusted to match `conda-forge-pinning` per Python EOL
-  real_python_min: "3.10"
+  real_python_min: "3.11"
   # derived
   patch_version: ${{ (version | split('.'))[2] }}
   dagster_version: 1.13.${{ patch_version }}
@@ -34,7 +34,7 @@ outputs:
       name: dagster-airbyte
     source:
       url: https://pypi.org/packages/source/d/dagster-airbyte/dagster_airbyte-${{ version }}.tar.gz
-      sha256: 539c1c063b0e9010b8677f5ddad253924b17d69e47cd51bdcb5a5c7160a7cd63
+      sha256: e58995ffc064dc12efd298d8a8867d981df79c50d66da7503e54c851b78ee642
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -74,7 +74,7 @@ outputs:
       name: dagster-aws
     source:
       url: https://pypi.org/packages/source/d/dagster-aws/dagster_aws-${{ version }}.tar.gz
-      sha256: e1e3f2c26785e775be2e557a7c60899f817afa2d741fc3613e960b68fbc512f2
+      sha256: 6fd7ff87bb6ad83f7073b3e21441fb4f449966e37cc5e586b70543177a0df849
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -109,7 +109,7 @@ outputs:
       name: dagster-celery
     source:
       url: https://pypi.org/packages/source/d/dagster-celery/dagster_celery-${{ version }}.tar.gz
-      sha256: 0b4347ecb2c755e2e9106c6913cf52f232925b1d8b68653595e64dc4e927b752
+      sha256: bb743e614cafa65b89994dfb06525a7dc72714ab2106596beb6ceea80fd893c2
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -150,7 +150,7 @@ outputs:
       name: dagster-celery-docker
     source:
       url: https://pypi.org/packages/source/d/dagster-celery-docker/dagster_celery_docker-${{ version }}.tar.gz
-      sha256: 1ee73d3981f2cf2a63908db0999b25c826700d939f8f1356ba9f244983a755b6
+      sha256: cda7d15198fa9c86d89d99a2312dd1e0a8c9c0d2c6987e342d8f9f425f9c4307
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -184,7 +184,7 @@ outputs:
       name: dagster-celery-k8s
     source:
       url: https://pypi.org/packages/source/d/dagster-celery-k8s/dagster_celery_k8s-${{ version }}.tar.gz
-      sha256: e08e8fab582cd123d0f15fc8e4df6e352111784efdfad7f6336aaed42c36ab3f
+      sha256: d6f20d17a7176534e5172c58c5cd85756bb08d10e407e207723a0d5fe2108d99
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -217,7 +217,7 @@ outputs:
       name: dagster-census
     source:
       url: https://pypi.org/packages/source/d/dagster-census/dagster_census-${{ version }}.tar.gz
-      sha256: df0b59226a213d9802bc0074bddaa70008e9fec53519ea7b8e5e7d2440941904
+      sha256: 7a93e94817d23f7be0a5a5cb3469f44df79e7f4d1c582fcd33064ff51760471f
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -249,7 +249,7 @@ outputs:
       name: dagster-dask
     source:
       url: https://pypi.org/packages/source/d/dagster-dask/dagster_dask-${{ version }}.tar.gz
-      sha256: 91865223bd79313e4cabac83a4728d6e483678030e64a3e8f3d3c6fdad881647
+      sha256: f6cb055f621817e2ecb1337702fea2958834a7f57221fccb510fc512cb5af289
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -290,7 +290,7 @@ outputs:
       name: dagster-datadog
     source:
       url: https://pypi.org/packages/source/d/dagster-datadog/dagster_datadog-${{ version }}.tar.gz
-      sha256: e7bf1f6aa44c1f2cce0586dba00746d0ea5d328ae26e84afe48122203b38a804
+      sha256: b16a374b82c09aa89a0a113937c953175fb531ce8b4254286b1efcc6566e05d8
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -322,7 +322,7 @@ outputs:
       name: dagster-dbt
     source:
       url: https://pypi.org/packages/source/d/dagster-dbt/dagster_dbt-${{ version }}.tar.gz
-      sha256: bc48d443e74178ff845def63142839a945114a2a2ef4f9785a00ac1aeecf992b
+      sha256: e819d3b5d2d686844c5d4702cc822431f57999cea23aad7929c823a3082cfca5
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -338,7 +338,7 @@ outputs:
         - python ${{ python_min }}.*
       run:
         - ${{ dagster }}
-        - dbt-core >=1.7,<1.12
+        - dbt-core >=1.7,<1.13
         - gitpython
         - jinja2
         - networkx
@@ -373,7 +373,7 @@ outputs:
       name: dagster-deltalake
     source:
       url: https://pypi.org/packages/source/d/dagster-deltalake/dagster_deltalake-${{ version }}.tar.gz
-      sha256: 0d39dd5f3fb385e0c13b12652af2950e672f1604962efb0aa94832b792af7a11
+      sha256: f5d96754b07f7a79c79ba65963da7054ede64a7bfe0a8b13a0276a5b3a71c28d
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -405,7 +405,7 @@ outputs:
       name: dagster-deltalake-pandas
     source:
       url: https://pypi.org/packages/source/d/dagster-deltalake-pandas/dagster_deltalake_pandas-${{ version }}.tar.gz
-      sha256: ba7dc1ae0f688902611e3aa423448f0383c72888ac05c655f4ce594be2541f2f
+      sha256: 6ce41a97200eed905237b59398dd9d67f588e1569fb379c222057613ae56ac05
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -437,7 +437,7 @@ outputs:
       name: dagster-deltalake-polars
     source:
       url: https://pypi.org/packages/source/d/dagster-deltalake-polars/dagster_deltalake_polars-${{ version }}.tar.gz
-      sha256: 8bb601d5ee52e0ee9583e227dc17d2112078f0f89713ab3333c8d82131fa45c8
+      sha256: d0d50969fb66bde89fc914ac96a0b80f53016a3e818c67448656da2c34231cd6
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -470,7 +470,7 @@ outputs:
       name: dagster-dlt
     source:
       url: https://pypi.org/packages/source/d/dagster-dlt/dagster_dlt-${{ version }}.tar.gz
-      sha256: 483f317e82ad4016c81d360cf4672091188d07c35671c5a916f59252364a6461
+      sha256: b060c650cc988befec19c574e7a07620b0617cb863ae73174deda555d60e584c
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -501,7 +501,7 @@ outputs:
       name: dagster-docker
     source:
       url: https://pypi.org/packages/source/d/dagster-docker/dagster_docker-${{ version }}.tar.gz
-      sha256: ce22ff0179d4a6e7353c6ea3a5d2373c3a1d710b295601e52999fbd7f9784416
+      sha256: 44f47c2ae9f977d817b2a79c70c86b6c995b35a3a404485e2677d6af62faee06
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -534,7 +534,7 @@ outputs:
       name: dagster-duckdb
     source:
       url: https://pypi.org/packages/source/d/dagster-duckdb/dagster_duckdb-${{ version }}.tar.gz
-      sha256: b8daaac05d39c2caa2afc57765932c2e1c3032cb814f9d4a6bac65d9fd486594
+      sha256: 8717082c523d61eb46eb31ec3e6d5ae9bb887184bdef21739d84fb927c27da5e
     build:
       noarch: python
       # used by dagster-duckdb-pyspark
@@ -566,7 +566,7 @@ outputs:
       name: dagster-duckdb-pandas
     source:
       url: https://pypi.org/packages/source/d/dagster-duckdb-pandas/dagster_duckdb_pandas-${{ version }}.tar.gz
-      sha256: 056de5b2006cdd4320d8257c65d547c89005768aa3366efc0cb92ead8a821740
+      sha256: 6e872fc2ecb3de286e6594b4e20459acef0ecb2d8457474b72ace956af5039b2
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -598,7 +598,7 @@ outputs:
       name: dagster-duckdb-polars
     source:
       url: https://pypi.org/packages/source/d/dagster-duckdb-polars/dagster_duckdb_polars-${{ version }}.tar.gz
-      sha256: 9e28b188822971e92cfcb91ade9d12dec88238642af4ea4bdaa79a73808e8566
+      sha256: 93080b32a4b7567255321fb77e05f4fa3034730f25edf615bd7b4aa45d3618ee
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -631,7 +631,7 @@ outputs:
       name: dagster-duckdb-pyspark
     source:
       url: https://pypi.org/packages/source/d/dagster-duckdb-pyspark/dagster_duckdb_pyspark-${{ version }}.tar.gz
-      sha256: f556cf7ea2d8d87077a928bb937fdc2a3f19b7a5c984f24384d888c03f788363
+      sha256: 231defbb471c3da414724ed37b4c9b3dd14d389fda4b3ccff34d17480c8b5b90
     build:
       noarch: python
       # skip: python_min != real_python_min
@@ -669,7 +669,7 @@ outputs:
       name: dagster-fivetran
     source:
       url: https://pypi.org/packages/source/d/dagster-fivetran/dagster_fivetran-${{ version }}.tar.gz
-      sha256: 07d25ba9fa058b03b4dc9486ce0eb283b29af85100b22d46677d660465e84715
+      sha256: 5e62aa8b9e91987c03ace63749a1635d845e99224654416f91a602d6c8a45697
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -708,7 +708,7 @@ outputs:
       name: dagster-gcp
     source:
       url: https://pypi.org/packages/source/d/dagster-gcp/dagster_gcp-${{ version }}.tar.gz
-      sha256: b81bb7fe683ddc487681fd6b7f82503b4857a5ff90832369d4f7f30fee3c7ee3
+      sha256: 23a3006fc5f9eecd6c9b3918ad93aa7f8e24d3d0d2914053624743d58963eb1f
     build:
       noarch: python
       # needed by dagster-gcp-pyspark
@@ -749,7 +749,7 @@ outputs:
       name: dagster-gcp-pandas
     source:
       url: https://pypi.org/packages/source/d/dagster-gcp-pandas/dagster_gcp_pandas-${{ version }}.tar.gz
-      sha256: 0624273a7721e18c92e4ef9399295c5ab7df0e479dc0fd1f9ee729cd97d8c793
+      sha256: 13bbf41da672df6f4efc78093ac3d07bce3609b7226416ef261ae3eac30c6a8d
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -781,7 +781,7 @@ outputs:
       name: dagster-gcp-pyspark
     source:
       url: https://pypi.org/packages/source/d/dagster-gcp-pyspark/dagster_gcp_pyspark-${{ version }}.tar.gz
-      sha256: 500679b195749a0e887a552bf46eaa808056acef6e1b35629cd81505269ced83
+      sha256: 8aa06d019a25ff324eff11035a3adc4dc2fc29100f2addb90fc9eb875b6f2de9
     build:
       noarch: python
       # skip: python_min != real_python_min
@@ -815,7 +815,7 @@ outputs:
       name: dagster-ge
     source:
       url: https://pypi.org/packages/source/d/dagster-ge/dagster_ge-${{ version }}.tar.gz
-      sha256: 3164da1de9ba9e7ad5a29c11223d060f3ed7820186d82cdcfa64ddd5f72869df
+      sha256: defde4d3a436d134c245f24c5c75dbe593d2fdacb3c999ec82f689c1dee7e6cf
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -848,7 +848,7 @@ outputs:
       name: dagster-github
     source:
       url: https://pypi.org/packages/source/d/dagster-github/dagster_github-${{ version }}.tar.gz
-      sha256: 8c5f8d8d6edddabeda2387dcf7505e3aee9dba739302d849b1a5e298dd1fc2fd
+      sha256: 0770c7295c05230d4ef18c96097b335acfcc50c0638c99816503cabe49be53f5
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -885,7 +885,7 @@ outputs:
       name: dagster-k8s
     source:
       url: https://pypi.org/packages/source/d/dagster-k8s/dagster_k8s-${{ version }}.tar.gz
-      sha256: efd2baf42112ce3d0ee1ee1dea91d9453987011c97604617073d15021501d465
+      sha256: db78cf7ec135d299c0dae3676a7cf188d24b9063671fde89f719c533239909b6
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -918,7 +918,7 @@ outputs:
       name: dagster-looker
     source:
       url: https://pypi.org/packages/source/d/dagster-looker/dagster_looker-${{ version }}.tar.gz
-      sha256: 02b67970f9807a246c83bebe3e9ec400fc1286fe3becdc51e64524338d7e9d4a
+      sha256: 634b5faff310ba81bbb4bb0ac9dcb4840dfd955d7d422319f83473d6febb72df
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -934,7 +934,7 @@ outputs:
         - lkml
         - looker-sdk <24.18.0
         - python >=${{ python_min }}
-        - python-liquid <2
+        - python-liquid >=2.2.1
         - sqlglot >=25.19.0
     tests:
       - python:
@@ -954,7 +954,7 @@ outputs:
       name: dagster-managed-elements
     source:
       url: https://pypi.org/packages/source/d/dagster-managed-elements/dagster_managed_elements-${{ version }}.tar.gz
-      sha256: dc9071977a68fc6eb1f25df2aacf4d8ca0eeb3c257f69867c35bbf65f95b2749
+      sha256: 44518634a3cade569579d3ac032a51333d844927924efa1389158a46c4db373e
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -996,7 +996,7 @@ outputs:
       name: dagster-mlflow
     source:
       url: https://pypi.org/packages/source/d/dagster-mlflow/dagster_mlflow-${{ version }}.tar.gz
-      sha256: 6118ede2b6aea3dd9e9439ee8b61b7776411823a7d6cb065d82ab66b2b936d8f
+      sha256: 7d32271eaa6ee47a3ba17a25f5125264ccc7071d38f27d6c23f79af36ca799b0
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1039,7 +1039,7 @@ outputs:
       name: dagster-msteams
     source:
       url: https://pypi.org/packages/source/d/dagster-msteams/dagster_msteams-${{ version }}.tar.gz
-      sha256: acec04890ca440c8ce5e74c7065ebe38f55be44126c757738a667dcba8623611
+      sha256: ae2bc8a257a73c75874e2edaf7521d4dd4e823b7791b01f30fef0c75453739e0
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1070,7 +1070,7 @@ outputs:
       name: dagster-mysql
     source:
       url: https://pypi.org/packages/source/d/dagster-mysql/dagster_mysql-${{ version }}.tar.gz
-      sha256: 17622fb33a49f88bc98332389f6d47bbd6de769660a506cb20f44bc08f6854a0
+      sha256: 78a3b23cc7387f36b22e72483be6529dcadcf09eacdbea879f2df4e8ce7f582d
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1103,7 +1103,7 @@ outputs:
       name: dagster-omni
     source:
       url: https://pypi.org/packages/source/d/dagster-omni/dagster_omni-${{ version }}.tar.gz
-      sha256: 196ea8af045319395f21aefc610bdd2a41cec88a11930bf651d0535f85f87f6a
+      sha256: a90ef89c32d282eb599d956e4a36954749270f439ce8bbe72e98825081090bdc
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1135,7 +1135,7 @@ outputs:
       name: dagster-openai
     source:
       url: https://pypi.org/packages/source/d/dagster-openai/dagster_openai-${{ version }}.tar.gz
-      sha256: 6ec73b76e0be1120f1d892ab69cae093240f433050c00dbcd1acea77694bf809
+      sha256: a240695ed934d2d9ef06ec317e6347ab87dd162260ec9d19c9202224389b25c0
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1167,7 +1167,7 @@ outputs:
       name: dagster-pagerduty
     source:
       url: https://pypi.org/packages/source/d/dagster-pagerduty/dagster_pagerduty-${{ version }}.tar.gz
-      sha256: 216cd5670e9e5d38fb0727ab7945c6c7bd07d58689551f94eb9f46c791fbf09c
+      sha256: 1b36abac3c3619877cf7805ee8830759825deedffae76e9dc4b442e57d6bca0c
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1200,7 +1200,7 @@ outputs:
       name: dagster-pandas
     source:
       url: https://pypi.org/packages/source/d/dagster-pandas/dagster_pandas-${{ version }}.tar.gz
-      sha256: 2647677823a81623d00362aa8c63e624ff3c5f502c472db3e277c639f438b864
+      sha256: 64a1abfec6d82c3ffefa44089d923117b56c3dc4b78a6e594b23fca962ed5304
     build:
       noarch: python
       # needed by dagster-gcp
@@ -1232,7 +1232,7 @@ outputs:
       name: dagster-pandera
     source:
       url: https://pypi.org/packages/source/d/dagster-pandera/dagster_pandera-${{ version }}.tar.gz
-      sha256: fbe9e978cab96126d10131219b19a57434244dec0d91baea4da9a90c8abfa3a8
+      sha256: f990b4428b4657634c588bab591c4c9fdf8e6f1dfa4173633fcfb91abacd450c
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1264,7 +1264,7 @@ outputs:
       name: dagster-papertrail
     source:
       url: https://pypi.org/packages/source/d/dagster-papertrail/dagster_papertrail-${{ version }}.tar.gz
-      sha256: 55879e0739bdb2a7547459c4f48a485647e6dfb527db070dd5da27a9fac4b426
+      sha256: a92ff7d54ff84ca62cc1b120eea546856b24b3ed2c622624c341d3fa0d539329
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1294,7 +1294,7 @@ outputs:
       name: dagster-postgres
     source:
       url: https://pypi.org/packages/source/d/dagster-postgres/dagster_postgres-${{ version }}.tar.gz
-      sha256: 3f2bb6831616318474d11cd83fc3c695b6128a37d336710bde22914d9dad46ec
+      sha256: e9e4edd0368320d310c86b8c32872e010da89f37f06ad2f170df8471ea2a278d
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1325,7 +1325,7 @@ outputs:
       name: dagster-powerbi
     source:
       url: https://pypi.org/packages/source/d/dagster-powerbi/dagster_powerbi-${{ version }}.tar.gz
-      sha256: eb6fc8355c89d8853d91f21102b3fea1acd97c4c8f10732ce4d2d0eb14bb2497
+      sha256: 35fbce5941841845c67b4cbc01874299526c3f935132f78df3e84d5d809bbd40
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1355,7 +1355,7 @@ outputs:
       name: dagster-prometheus
     source:
       url: https://pypi.org/packages/source/d/dagster-prometheus/dagster_prometheus-${{ version }}.tar.gz
-      sha256: 6f29bc6c5044cf69f46ed54bcc0170438cc723ae071c1bcc6d86f9b8d5a56dd0
+      sha256: b9513c6fc45364e4bfbdd339b1f2567dcb3e746c4a86878b522a79ce3ee03b02
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1386,7 +1386,7 @@ outputs:
       name: dagster-pyspark
     source:
       url: https://pypi.org/packages/source/d/dagster-pyspark/dagster_pyspark-${{ version }}.tar.gz
-      sha256: 39ce7a4a16b58cfbf6f909fe7772b64e2cec51ea0443fe121b793c3a712de69a
+      sha256: 4a49fcf47da33eee649139ea7b2097cd3647a13971750c6d5e08d0e8d88f6fa4
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1421,7 +1421,7 @@ outputs:
       name: dagster-sigma
     source:
       url: https://pypi.org/packages/source/d/dagster-sigma/dagster_sigma-${{ version }}.tar.gz
-      sha256: e6ab9b2fdea30942412e241a12faf5758f1275ea6e67c7b32863c9ebf1995d33
+      sha256: 45978aecb7850bcbcc70034283d0b142a30a37121caaeb4139e4eb676cdc71ec
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1461,7 +1461,7 @@ outputs:
       name: dagster-slack
     source:
       url: https://pypi.org/packages/source/d/dagster-slack/dagster_slack-${{ version }}.tar.gz
-      sha256: 4c68c379be326ca43b9a9f78811e3f0198af251170948310e46c4e48088bfe39
+      sha256: 6a644fd5534157e3476f38b03d1d621a9a0761af852787b92d0323760cadf022
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1492,7 +1492,7 @@ outputs:
       name: dagster-snowflake
     source:
       url: https://pypi.org/packages/source/d/dagster-snowflake/dagster_snowflake-${{ version }}.tar.gz
-      sha256: 1c1e1a98bc18fdc4a14ccfd2bd5bee65dc8b575190d1ab18a33b93c487d1bdf2
+      sha256: 432f5fee990322a69fd2739091210269b43b74aeb914cc410d4bd0189fe17171
     build:
       skip: python_min != real_python_min
       noarch: python
@@ -1526,7 +1526,7 @@ outputs:
       name: dagster-snowflake-pandas
     source:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pandas/dagster_snowflake_pandas-${{ version }}.tar.gz
-      sha256: 802ef5604ae16f8dcbbe258f5ae22c6058a8ad333c31a5f9781a5fe63dccd601
+      sha256: 06cf149dfdf0ad54d4ecc417481043ebed9c96ebaf7b76914d2bcaed09ca53ca
     build:
       skip: python_min != real_python_min
       noarch: python
@@ -1563,7 +1563,7 @@ outputs:
       name: dagster-snowflake-pyspark
     source:
       url: https://pypi.org/packages/source/d/dagster-snowflake-pyspark/dagster_snowflake_pyspark-${{ version }}.tar.gz
-      sha256: 64c7e7d025f2753b3ee538ae0bc1f8d07b6508b4433f11a57e5e10aba62ec241
+      sha256: 53a54d2617d3feb56d81c36abeade162c6606aacd54523bb98db225db4bee4ef
     build:
       skip: python_min != real_python_min
       noarch: python
@@ -1599,7 +1599,7 @@ outputs:
       name: dagster-spark
     source:
       url: https://pypi.org/packages/source/d/dagster-spark/dagster_spark-${{ version }}.tar.gz
-      sha256: 59489e142fb82d6cb1f6aaa40d91dbd7d86d802636885a1d839003a28fcadade
+      sha256: d348d14c2fb5140554f1971918f3e3380facc4f9fae52a980a910f45af004cfa
     build:
       noarch: python
       # used by other dagster-*-pyspark
@@ -1630,7 +1630,7 @@ outputs:
       name: dagster-ssh
     source:
       url: https://pypi.org/packages/source/d/dagster-ssh/dagster_ssh-${{ version }}.tar.gz
-      sha256: df24d6e2a0f961836eab0c13cb12b466450b2adb1da2cec920558acee77b402a
+      sha256: f21ae3071ba984ab12f19421a91c7dba00654fe08f54a0beed28bc33fcb0ecb2
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1663,7 +1663,7 @@ outputs:
       name: dagster-tableau
     source:
       url: https://pypi.org/packages/source/d/dagster-tableau/dagster_tableau-${{ version }}.tar.gz
-      sha256: e5f62fc5a24f870f084244a5b974f50ad2d0915747f853018a9eff3df5e25d79
+      sha256: 1990a71e69119c43d1debbd344060272902104d72cc78f52f6a5026916b3920e
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1696,7 +1696,7 @@ outputs:
       name: dagster-twilio
     source:
       url: https://pypi.org/packages/source/d/dagster-twilio/dagster_twilio-${{ version }}.tar.gz
-      sha256: 583fef11fcd681e0dbe429a0021c95eed1b922eb92633175ca117b415c819cd5
+      sha256: 66af3b47ee28643dcdb671017f8cd81d76cff2f57adcc24e497e38c62ceb130d
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1730,7 +1730,7 @@ outputs:
       name: dagster-wandb
     source:
       url: https://pypi.org/packages/source/d/dagster-wandb/dagster_wandb-${{ version }}.tar.gz
-      sha256: c52e06fd3134232009c23d24bbe71bf38d1dcdd310e07d4a56c8aeb126d84145
+      sha256: c1d74e37de0cee694464de7f9894fdc2544582f873020ffe703a5ee1c1cabfd9
     build:
       noarch: python
       skip: python_min != real_python_min
@@ -1743,6 +1743,7 @@ outputs:
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
+        - wandb <0.30.0
         - wandb >=0.15.11,<1.0
     tests:
       - python:
@@ -1767,7 +1768,7 @@ outputs:
       name: dagstermill
     source:
       url: https://pypi.org/packages/source/d/dagstermill/dagstermill-${{ version }}.tar.gz
-      sha256: 7fc9e78b1ad637262bdf107cc9063e7dfe0cc128c506e2c6466539f165cf433d
+      sha256: bf4e3f2c875b2a7d4298e0bcb2fe7596cffe069ed76ac15ca3451fcca0ed755a
     build:
       noarch: python
       skip: python_min != real_python_min
