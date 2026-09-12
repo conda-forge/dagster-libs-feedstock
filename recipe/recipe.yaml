@@ -1743,6 +1743,7 @@ outputs:
       run:
         - ${{ dagster }}
         - python >=${{ python_min }}
+        - wandb <0.30.0
         - wandb >=0.15.11,<1.0
     tests:
       - python:
