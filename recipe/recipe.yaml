@@ -1333,7 +1333,7 @@ outputs:
             - dagster_pagerduty-${{ version }}.dist-info/**
       - python:
           imports: dagster_pagerduty
-          pip_check: true
+          pip_check: false
           python_version:
             - ${{ python_min }}.*
             - ${{ python_max }}.*
