@@ -380,6 +380,7 @@ outputs:
         - orjson
         - packaging
         - python >=${{ python_min }}
+        - python-dateutil
         - requests
         - rich
         - sqlglot-rs
