@@ -1146,7 +1146,7 @@ outputs:
         #   pip check fails with
         #     databricks-sdk 0.73.0 has requirement protobuf ...,<7.0 but you have protobuf 7.35.1
         #     https://github.com/conda-forge/databricks-sdk-feedstock/pull/96
-        - databricks-sdk !=0.74.0
+        - databricks-sdk >=0.75.0
     tests:
       - package_contents:
           strict: true
