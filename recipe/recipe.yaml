@@ -1142,6 +1142,11 @@ outputs:
         #      from google.protobuf import service as _service
         #    ImportError: cannot import name 'service' from 'google.protobuf' ($SRC_DIR_env/lib/python3.10/site-packages/google/protobuf/__init__.py)
         - mlflow >=2
+        # https://github.com/conda-forge/dagster-libs-feedstock/pull/257
+        #   pip check fails with
+        #     databricks-sdk 0.73.0 has requirement protobuf ...,<7.0 but you have protobuf 7.35.1
+        #     https://github.com/conda-forge/databricks-sdk-feedstock/pull/96
+        - databricks-sdk !=0.74.0
     tests:
       - package_contents:
           strict: true
