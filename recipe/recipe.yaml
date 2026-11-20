@@ -1050,6 +1050,7 @@ outputs:
         - lkml
         - looker-sdk <24.18.0
         - python >=${{ python_min }}
+        - python-liquid <3
         - python-liquid >=2.2.1
         - sqlglot >=25.19.0
     tests:
